@@ -1,4 +1,6 @@
 
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -34,13 +36,15 @@ export function Difference() {
           </div>
           
           <div className="relative aspect-square lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
-            <Image
-              src={parkImg?.imageUrl || ''}
-              alt="Koregaon Park Avenue"
-              fill
-              className="object-cover"
-              data-ai-hint={parkImg?.imageHint}
-            />
+            {parkImg?.imageUrl && (
+              <Image
+                src={parkImg.imageUrl}
+                alt="Koregaon Park Avenue"
+                fill
+                className="object-cover"
+                data-ai-hint={parkImg.imageHint}
+              />
+            )}
             <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
           </div>
         </div>

@@ -1,7 +1,9 @@
 
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { MapPin } from 'lucide-react';
@@ -33,9 +35,9 @@ export function Projects() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
           <p className="text-accent font-semibold tracking-wider uppercase mb-2">Featured Projects</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Driving Leaders Forward</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Shaping Pune's Skyline</h2>
           <p className="text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-            Your mind knows the way — we help you follow it. Explore our portfolio of landmark developments.
+            Architectural masterpieces designed for modern living. Explore our portfolio of landmark developments.
           </p>
         </div>
 
@@ -45,13 +47,15 @@ export function Projects() {
             return (
               <Card key={idx} className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-300 rounded-2xl">
                 <div className="relative aspect-[4/5] overflow-hidden">
-                  <Image
-                    src={projectImg?.imageUrl || ''}
-                    alt={project.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                    data-ai-hint={projectImg?.imageHint}
-                  />
+                  {projectImg?.imageUrl && (
+                    <Image
+                      src={projectImg.imageUrl}
+                      alt={project.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      data-ai-hint={projectImg.imageHint}
+                    />
+                  )}
                   <div className="absolute top-4 right-4">
                     <Badge className="bg-white/90 text-primary hover:bg-white">{project.type}</Badge>
                   </div>
@@ -70,8 +74,8 @@ export function Projects() {
         
         <div className="mt-16 text-center">
           <p className="text-foreground/70 mb-8 max-w-xl mx-auto italic font-light">
-            &ldquo;Our workspaces are built to inspire connection and innovation, 
-            featuring open layouts that promote teamwork and fresh ideas.&rdquo;
+            &ldquo;Our spaces are built to inspire connection and innovation, 
+            featuring open layouts that promote a lifestyle of distinction.&rdquo;
           </p>
           <button className="text-primary font-bold border-b-2 border-accent pb-1 hover:text-accent transition-colors">
             VIEW ALL PROJECTS

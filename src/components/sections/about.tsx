@@ -1,4 +1,6 @@
 
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -35,13 +37,15 @@ export function About() {
           </div>
           
           <div className="order-1 lg:order-2 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-            <Image
-              src={cityImage?.imageUrl || ''}
-              alt={cityImage?.description || ''}
-              fill
-              className="object-cover"
-              data-ai-hint={cityImage?.imageHint}
-            />
+            {cityImage?.imageUrl && (
+              <Image
+                src={cityImage.imageUrl}
+                alt={cityImage.description || 'Pune Skyline'}
+                fill
+                className="object-cover"
+                data-ai-hint={cityImage.imageHint}
+              />
+            )}
             <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
             <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur p-6 rounded-xl border-l-4 border-accent shadow-lg">
               <h3 className="text-2xl font-bold text-primary mb-1">We&apos;re building the future, today.</h3>

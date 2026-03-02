@@ -1,4 +1,6 @@
 
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -12,13 +14,15 @@ export function Philosophy() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <div className="lg:w-1/2 relative aspect-video rounded-3xl overflow-hidden shadow-2xl">
-            <Image
-              src={officeImg?.imageUrl || ''}
-              alt="ViMond Office"
-              fill
-              className="object-cover"
-              data-ai-hint={officeImg?.imageHint}
-            />
+            {officeImg?.imageUrl && (
+              <Image
+                src={officeImg.imageUrl}
+                alt={officeImg.description || 'ViMond Philosophy'}
+                fill
+                className="object-cover"
+                data-ai-hint={officeImg.imageHint}
+              />
+            )}
           </div>
           
           <div className="lg:w-1/2">

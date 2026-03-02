@@ -1,4 +1,6 @@
 
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -46,13 +48,15 @@ export function Blogs() {
             return (
               <Card key={idx} className="group overflow-hidden border-none shadow-lg rounded-2xl bg-white flex flex-col h-full">
                 <div className="relative aspect-video overflow-hidden">
-                  <Image
-                    src={blogImg?.imageUrl || ''}
-                    alt={post.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    data-ai-hint={blogImg?.imageHint}
-                  />
+                  {blogImg?.imageUrl && (
+                    <Image
+                      src={blogImg.imageUrl}
+                      alt={post.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      data-ai-hint={blogImg.imageHint}
+                    />
+                  )}
                   <div className="absolute top-4 left-4 bg-primary text-white font-bold w-10 h-10 flex items-center justify-center rounded-lg text-sm">
                     {post.num}
                   </div>
