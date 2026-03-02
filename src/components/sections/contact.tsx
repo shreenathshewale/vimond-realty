@@ -1,27 +1,69 @@
-
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Contact() {
+  const contactImg = PlaceHolderImages.find(img => img.id === 'city-skyline');
+
   return (
-    <section id="contact" className="py-40 bg-white">
-      <div className="max-w-3xl mx-auto px-6 text-center">
-        <h2 className="text-4xl md:text-6xl font-light tracking-tighter text-primary mb-16">
-          Begin your journey<span className="text-accent">.</span>
-        </h2>
-        <form className="space-y-6">
-          <Input 
-            placeholder="NAME" 
-            className="border-0 border-b border-primary/20 rounded-none bg-transparent h-16 text-xs tracking-widest focus-visible:ring-0 focus-visible:border-primary transition-colors" 
+    <section id="contact" className="min-h-screen bg-background flex flex-col md:flex-row border-t border-white/5">
+      <div className="w-full md:w-1/2 relative min-h-[400px]">
+        {contactImg?.imageUrl && (
+          <Image
+            src={contactImg.imageUrl}
+            alt="Pune Skyline"
+            fill
+            className="object-cover opacity-40 grayscale"
+            data-ai-hint={contactImg.imageHint}
           />
-          <Input 
-            placeholder="EMAIL" 
-            className="border-0 border-b border-primary/20 rounded-none bg-transparent h-16 text-xs tracking-widest focus-visible:ring-0 focus-visible:border-primary transition-colors" 
-          />
-          <Button className="w-full h-16 rounded-none bg-primary text-white text-[10px] tracking-[0.4em] uppercase mt-12 hover:bg-primary/90">
+        )}
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent" />
+        <div className="absolute inset-0 p-20 flex flex-col justify-end">
+          <h2 className="text-5xl md:text-8xl font-serif font-light text-white mb-8">
+            Begin your <br /> <span className="italic text-primary">journey.</span>
+          </h2>
+          <div className="space-y-4 text-[10px] tracking-[0.3em] uppercase opacity-60">
+            <p>Pune, Maharashtra, India</p>
+            <p>inquiry@vmondrealty.com</p>
+            <p>+91 (0) 20 2567 0000</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full md:w-1/2 bg-background p-12 md:p-32 flex flex-col justify-center">
+        <form className="space-y-12 max-w-lg mx-auto w-full">
+          <div className="space-y-10">
+            <div className="group">
+              <Input 
+                placeholder="FULL NAME" 
+                className="luxury-input"
+              />
+            </div>
+            <div className="group">
+              <Input 
+                placeholder="EMAIL ADDRESS" 
+                className="luxury-input"
+              />
+            </div>
+            <div className="group">
+              <Input 
+                placeholder="PHONE NUMBER" 
+                className="luxury-input"
+              />
+            </div>
+            <div className="group">
+              <Textarea 
+                placeholder="YOUR MESSAGE" 
+                className="luxury-input min-h-[100px] resize-none"
+              />
+            </div>
+          </div>
+          <Button className="w-full h-20 rounded-none bg-primary text-background text-[11px] tracking-[0.5em] uppercase font-bold hover:bg-white transition-all shadow-2xl">
             Submit Inquiry
           </Button>
         </form>

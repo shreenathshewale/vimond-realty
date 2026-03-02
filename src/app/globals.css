@@ -1,30 +1,29 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 207 24% 95%;
-    --foreground: 212 41% 15%;
-    --card: 0 0% 100%;
-    --card-foreground: 212 41% 15%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 212 41% 15%;
-    --primary: 212 41% 28%;
-    --primary-foreground: 210 20% 98%;
-    --secondary: 207 24% 90%;
-    --secondary-foreground: 212 41% 28%;
-    --muted: 207 15% 85%;
-    --muted-foreground: 212 15% 45%;
-    --accent: 189 56% 55%;
-    --accent-foreground: 210 20% 98%;
+    --background: 220 15% 8%; /* Deep Charcoal */
+    --foreground: 30 20% 98%; /* Off White */
+    --card: 220 15% 10%;
+    --card-foreground: 30 20% 98%;
+    --popover: 220 15% 10%;
+    --popover-foreground: 30 20% 98%;
+    --primary: 38 35% 67%; /* Soft Gold/Champagne */
+    --primary-foreground: 220 15% 8%;
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 38 35% 67%;
+    --muted: 220 10% 20%;
+    --muted-foreground: 30 10% 70%;
+    --accent: 38 35% 67%;
+    --accent-foreground: 220 15% 8%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 20% 98%;
-    --border: 212 20% 85%;
-    --input: 212 20% 85%;
-    --ring: 212 41% 28%;
-    --radius: 0.75rem;
+    --border: 220 10% 18%;
+    --input: 220 10% 18%;
+    --ring: 38 35% 67%;
+    --radius: 0.5rem;
   }
 }
 
@@ -33,6 +32,21 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/30 selection:text-primary;
   }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.glass-nav {
+  @apply bg-background/60 backdrop-blur-xl border-b border-white/5;
+}
+
+.luxury-input {
+  @apply bg-transparent border-0 border-b border-white/10 rounded-none px-0 py-4 text-sm tracking-widest uppercase focus-visible:ring-0 focus-visible:border-primary transition-all duration-500;
+}
+
+.hover-gold {
+  @apply hover:text-primary transition-colors duration-300;
 }
