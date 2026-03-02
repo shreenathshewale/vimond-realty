@@ -16,25 +16,25 @@ export function Hero() {
           src={heroImage.imageUrl}
           alt={heroImage.description}
           fill
-          className="object-cover opacity-40 grayscale"
+          className="object-cover opacity-20 grayscale scale-105"
           priority
           data-ai-hint={heroImage.imageHint}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-transparent to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
       </div>
       
       <div className="relative z-10 text-center px-6">
-        <h1 className="text-6xl md:text-[120px] font-serif font-light leading-none tracking-tight mb-12 animate-in fade-in slide-in-from-bottom-12 duration-1000">
+        <h1 className="text-6xl md:text-[140px] font-serif font-light leading-none tracking-tight mb-16 animate-in fade-in slide-in-from-bottom-12 duration-1000 text-foreground">
           Intelligent Luxury<span className="text-primary italic">.</span>
         </h1>
-        <p className="text-[12px] md:text-[14px] tracking-[0.6em] uppercase font-light text-primary/80 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
+        <p className="text-[10px] md:text-[12px] tracking-[0.8em] uppercase font-light text-primary animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
           Redefining the Pune Skyline
         </p>
       </div>
       
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 opacity-20 flex flex-col items-center gap-4">
+      <div className="absolute bottom-16 left-1/2 -translate-x-1/2 opacity-30 flex flex-col items-center gap-6">
         <span className="text-[8px] tracking-[0.5em] uppercase">Scroll</span>
-        <div className="w-px h-16 bg-gradient-to-b from-primary to-transparent"></div>
+        <div className="w-[1px] h-20 bg-gradient-to-b from-primary to-transparent"></div>
       </div>
     </section>
   );

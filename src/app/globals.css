@@ -4,26 +4,26 @@
 
 @layer base {
   :root {
-    --background: 220 15% 8%; /* Deep Charcoal */
-    --foreground: 30 20% 98%; /* Off White */
-    --card: 220 15% 10%;
-    --card-foreground: 30 20% 98%;
-    --popover: 220 15% 10%;
-    --popover-foreground: 30 20% 98%;
-    --primary: 38 35% 67%; /* Soft Gold/Champagne */
-    --primary-foreground: 220 15% 8%;
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 38 35% 67%;
-    --muted: 220 10% 20%;
-    --muted-foreground: 30 10% 70%;
-    --accent: 38 35% 67%;
-    --accent-foreground: 220 15% 8%;
+    --background: 30 20% 98%; /* Warm Ivory / Off-White */
+    --foreground: 220 15% 15%; /* Soft Charcoal */
+    --card: 30 20% 100%;
+    --card-foreground: 220 15% 15%;
+    --popover: 30 20% 100%;
+    --popover-foreground: 220 15% 15%;
+    --primary: 38 45% 55%; /* Muted Gold / Brushed Gold */
+    --primary-foreground: 30 20% 98%;
+    --secondary: 30 10% 92%; /* Soft Taupe / Beige */
+    --secondary-foreground: 220 15% 15%;
+    --muted: 30 10% 94%;
+    --muted-foreground: 220 10% 45%;
+    --accent: 38 45% 55%;
+    --accent-foreground: 30 20% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 20% 98%;
-    --border: 220 10% 18%;
-    --input: 220 10% 18%;
-    --ring: 38 35% 67%;
-    --radius: 0.5rem;
+    --border: 30 15% 88%;
+    --input: 30 15% 88%;
+    --ring: 38 45% 55%;
+    --radius: 0.25rem;
   }
 }
 
@@ -32,21 +32,38 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/30 selection:text-primary;
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/20 selection:text-primary;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    @apply font-serif font-light;
   }
 }
 
 .glass-nav {
-  @apply bg-background/60 backdrop-blur-xl border-b border-white/5;
+  @apply bg-background/80 backdrop-blur-xl border-b border-black/5;
 }
 
 .luxury-input {
-  @apply bg-transparent border-0 border-b border-white/10 rounded-none px-0 py-4 text-sm tracking-widest uppercase focus-visible:ring-0 focus-visible:border-primary transition-all duration-500;
+  @apply bg-transparent border-0 border-b border-black/10 rounded-none px-0 py-4 text-[10px] tracking-widest uppercase focus-visible:ring-0 focus-visible:border-primary transition-all duration-500 placeholder:text-muted-foreground/50;
 }
 
 .hover-gold {
   @apply hover:text-primary transition-colors duration-300;
+}
+
+.nav-link {
+  @apply text-[9px] font-medium tracking-[0.4em] uppercase transition-all duration-300 relative py-2;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-[1px] bg-primary transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.section-padding {
+  @apply py-32 md:py-48 px-8;
 }
