@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const projects = [
@@ -12,35 +13,37 @@ const projects = [
 
 export function Projects() {
   return (
-    <section id="projects" className="py-32 bg-background border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
-          <div className="max-w-2xl">
-            <span className="text-[9px] tracking-[0.6em] uppercase text-primary font-medium mb-6 block">The Collection</span>
-            <h2 className="text-5xl md:text-6xl font-serif font-light leading-none">A curated selection of landmarks across Pune.</h2>
-          </div>
-          <button className="text-[10px] tracking-[0.4em] uppercase text-primary border-b border-primary/30 pb-2 hover:border-primary transition-all">
-            View All Projects
-          </button>
+    <section id="projects" className="section-padding charcoal-bg">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-24">
+          <h2 className="text-4xl md:text-6xl font-serif text-[#F5F1EB] mb-12">Our Projects</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {projects.map((project, idx) => {
             const projectImg = PlaceHolderImages.find(img => img.id === project.imageId);
             return (
-              <div key={idx} className="group relative aspect-[3/4] overflow-hidden cursor-pointer">
-                {projectImg?.imageUrl && (
-                  <Image
-                    src={projectImg.imageUrl}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0"
-                    data-ai-hint={projectImg.imageHint}
-                  />
-                )}
-                <div className="absolute inset-0 bg-background/40 group-hover:bg-background/20 transition-all duration-700" />
-                <div className="absolute bottom-12 left-12 text-white transform transition-transform duration-500 group-hover:-translate-y-2">
-                  <h3 className="text-3xl font-serif font-light tracking-tight mb-2">{project.title}</h3>
-                  <p className="text-[9px] tracking-[0.3em] uppercase opacity-60 text-primary">{project.location}</p>
+              <div key={idx} className="group cursor-pointer">
+                <div className="relative aspect-[3/4] overflow-hidden mb-8">
+                  {projectImg?.imageUrl && (
+                    <Image
+                      src={projectImg.imageUrl}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                      data-ai-hint={projectImg.imageHint}
+                    />
+                  )}
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-3xl font-serif text-[#F5F1EB]">{project.title}</h3>
+                  <div className="flex items-center justify-between">
+                    <p className="text-[10px] tracking-[0.3em] uppercase text-[#B89B72]">{project.location}</p>
+                    <Link href="/projects/ongoing" className="text-[10px] tracking-[0.3em] uppercase text-[#F5F1EB]/50 hover:text-[#B89B72] transition-colors">
+                      Explore →
+                    </Link>
+                  </div>
+                  <div className="w-full h-[1px] bg-[#B89B72]/20" />
                 </div>
               </div>
             );

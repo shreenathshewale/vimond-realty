@@ -4,26 +4,46 @@
 
 @layer base {
   :root {
-    --background: 30 20% 98%; /* Warm Ivory / Off-White */
-    --foreground: 220 15% 15%; /* Soft Charcoal */
-    --card: 30 20% 100%;
-    --card-foreground: 220 15% 15%;
-    --popover: 30 20% 100%;
-    --popover-foreground: 220 15% 15%;
-    --primary: 38 45% 55%; /* Muted Gold / Brushed Gold */
-    --primary-foreground: 30 20% 98%;
-    --secondary: 30 10% 92%; /* Soft Taupe / Beige */
-    --secondary-foreground: 220 15% 15%;
-    --muted: 30 10% 94%;
-    --muted-foreground: 220 10% 45%;
-    --accent: 38 45% 55%;
-    --accent-foreground: 30 20% 98%;
+    --background: 36 25% 94%; /* #F5F1EB - Light Ivory */
+    --foreground: 0 0% 17%; /* #2C2C2C - Primary Text */
+    --card: 36 25% 96%;
+    --card-foreground: 0 0% 17%;
+    --popover: 36 25% 96%;
+    --popover-foreground: 0 0% 17%;
+    --primary: 36 33% 58%; /* #B89B72 - Accent Gold */
+    --primary-foreground: 36 25% 94%;
+    --secondary: 35 23% 87%; /* #E8DFD3 - Secondary Light */
+    --secondary-foreground: 0 0% 17%;
+    --muted: 35 23% 90%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 36 33% 58%;
+    --accent-foreground: 36 25% 94%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 20% 98%;
-    --border: 30 15% 88%;
-    --input: 30 15% 88%;
-    --ring: 38 45% 55%;
-    --radius: 0.25rem;
+    --border: 36 15% 85%;
+    --input: 36 15% 85%;
+    --ring: 36 33% 58%;
+    --radius: 0rem; /* Strict rectangular look for luxury */
+  }
+
+  .dark {
+    --background: 0 0% 12%; /* #1F1F1F - Dark Charcoal */
+    --foreground: 36 25% 94%;
+    --card: 0 0% 15%;
+    --card-foreground: 36 25% 94%;
+    --popover: 0 0% 15%;
+    --popover-foreground: 36 25% 94%;
+    --primary: 36 33% 58%;
+    --primary-foreground: 0 0% 12%;
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 36 25% 94%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 36 33% 58%;
+    --accent-foreground: 36 25% 94%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 36 33% 58%;
   }
 }
 
@@ -35,7 +55,7 @@
     @apply bg-background text-foreground font-sans antialiased selection:bg-primary/20 selection:text-primary;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-light;
+    @apply font-serif font-light tracking-wider;
   }
 }
 
@@ -44,7 +64,7 @@
 }
 
 .luxury-input {
-  @apply bg-transparent border-0 border-b border-black/10 rounded-none px-0 py-4 text-[10px] tracking-widest uppercase focus-visible:ring-0 focus-visible:border-primary transition-all duration-500 placeholder:text-muted-foreground/50;
+  @apply bg-transparent border-0 border-b border-foreground/20 rounded-none px-0 py-4 text-xs tracking-widest uppercase focus-visible:ring-0 focus-visible:border-primary transition-all duration-500 placeholder:text-muted-foreground/40;
 }
 
 .hover-gold {
@@ -52,7 +72,7 @@
 }
 
 .nav-link {
-  @apply text-[9px] font-medium tracking-[0.4em] uppercase transition-all duration-300 relative py-2;
+  @apply text-[10px] font-medium tracking-[0.3em] uppercase transition-all duration-300 relative py-2;
 }
 
 .nav-link::after {
@@ -66,4 +86,12 @@
 
 .section-padding {
   @apply py-32 md:py-48 px-8;
+}
+
+.charcoal-bg {
+  background-color: #1F1F1F;
+}
+
+.ivory-bg {
+  background-color: #F5F1EB;
 }
