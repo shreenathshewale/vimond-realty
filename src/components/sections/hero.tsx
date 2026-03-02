@@ -3,48 +3,37 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ChevronRight } from 'lucide-react';
 
 export function Hero() {
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-video-alt');
 
+  if (!heroImage?.imageUrl) return null;
+
   return (
-    <section className="relative h-[90vh] min-h-[600px] w-full flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
-        {heroImage?.imageUrl && (
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description || 'Luxury Real Estate'}
-            fill
-            className="object-cover brightness-[0.4]"
-            priority
-            data-ai-hint={heroImage.imageHint}
-          />
-        )}
+        <Image
+          src={heroImage.imageUrl}
+          alt={heroImage.description}
+          fill
+          className="object-cover brightness-75"
+          priority
+          data-ai-hint={heroImage.imageHint}
+        />
       </div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <p className="text-accent font-medium tracking-widest uppercase mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
-          Latest Project: Vivencia
-        </p>
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight animate-in fade-in slide-in-from-bottom-8 duration-1000">
-          Elevate Your Lifestyle<br className="hidden md:block" />
-          <span className="text-accent">— with Intelligent Luxury.</span>
+      <div className="relative z-10 text-center text-white px-6">
+        <h1 className="text-5xl md:text-8xl font-light tracking-tighter mb-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+          Intelligent Luxury<span className="text-accent">.</span>
         </h1>
-        <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 font-light">
-          Experience residential excellence in the heart of Koregaon Park, Pune.
-          Crafting landmarks designed for the discerning few.
+        <p className="text-sm md:text-lg tracking-[0.3em] uppercase font-light text-white/70">
+          Redefining the Pune Skyline
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-300">
-          <Button size="lg" className="bg-accent text-white hover:bg-accent/90 px-8 py-6 text-lg rounded-full">
-            Contact Us <ChevronRight className="ml-2 w-5 h-5" />
-          </Button>
-          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary px-8 py-6 text-lg rounded-full">
-            Explore Vivencia
-          </Button>
-        </div>
+      </div>
+      
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce opacity-30">
+        <div className="w-px h-12 bg-white"></div>
       </div>
     </section>
   );
