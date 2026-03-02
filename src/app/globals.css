@@ -4,46 +4,46 @@
 
 @layer base {
   :root {
-    --background: 36 25% 94%; /* #F5F1EB - Light Ivory */
-    --foreground: 0 0% 17%; /* #2C2C2C - Primary Text */
-    --card: 36 25% 96%;
-    --card-foreground: 0 0% 17%;
-    --popover: 36 25% 96%;
-    --popover-foreground: 0 0% 17%;
-    --primary: 36 33% 58%; /* #B89B72 - Accent Gold */
-    --primary-foreground: 36 25% 94%;
-    --secondary: 35 23% 87%; /* #E8DFD3 - Secondary Light */
-    --secondary-foreground: 0 0% 17%;
-    --muted: 35 23% 90%;
+    --background: 38 22% 93%; /* #F4F1EC - Warm Ivory */
+    --foreground: 0 0% 12%; /* #1F1F1F - Dark Text */
+    --card: 38 22% 95%;
+    --card-foreground: 0 0% 12%;
+    --popover: 38 22% 95%;
+    --popover-foreground: 0 0% 12%;
+    --primary: 37 34% 51%; /* #B08D57 - Brushed Gold */
+    --primary-foreground: 38 22% 93%;
+    --secondary: 28 22% 78%; /* #D6C6B8 - Soft Contrast */
+    --secondary-foreground: 0 0% 12%;
+    --muted: 28 22% 85%;
     --muted-foreground: 0 0% 45%;
-    --accent: 36 33% 58%;
-    --accent-foreground: 36 25% 94%;
+    --accent: 37 34% 51%;
+    --accent-foreground: 38 22% 93%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 20% 98%;
-    --border: 36 15% 85%;
-    --input: 36 15% 85%;
-    --ring: 36 33% 58%;
-    --radius: 0rem; /* Strict rectangular look for luxury */
+    --border: 37 10% 80%;
+    --input: 37 10% 80%;
+    --ring: 37 34% 51%;
+    --radius: 0rem;
   }
 
   .dark {
-    --background: 0 0% 12%; /* #1F1F1F - Dark Charcoal */
-    --foreground: 36 25% 94%;
-    --card: 0 0% 15%;
-    --card-foreground: 36 25% 94%;
-    --popover: 0 0% 15%;
-    --popover-foreground: 36 25% 94%;
-    --primary: 36 33% 58%;
-    --primary-foreground: 0 0% 12%;
+    --background: 209 26% 15%; /* #1C2630 - Midnight Blue-Charcoal */
+    --foreground: 38 22% 93%;
+    --card: 209 26% 18%;
+    --card-foreground: 38 22% 93%;
+    --popover: 209 26% 18%;
+    --popover-foreground: 38 22% 93%;
+    --primary: 37 34% 51%;
+    --primary-foreground: 209 26% 15%;
     --secondary: 0 0% 18%;
-    --secondary-foreground: 36 25% 94%;
+    --secondary-foreground: 38 22% 93%;
     --muted: 0 0% 20%;
     --muted-foreground: 0 0% 65%;
-    --accent: 36 33% 58%;
-    --accent-foreground: 36 25% 94%;
-    --border: 0 0% 25%;
-    --input: 0 0% 25%;
-    --ring: 36 33% 58%;
+    --accent: 37 34% 51%;
+    --accent-foreground: 38 22% 93%;
+    --border: 209 15% 25%;
+    --input: 209 15% 25%;
+    --ring: 37 34% 51%;
   }
 }
 
@@ -64,7 +64,7 @@
 }
 
 .luxury-input {
-  @apply bg-transparent border-0 border-b border-foreground/20 rounded-none px-0 py-4 text-xs tracking-widest uppercase focus-visible:ring-0 focus-visible:border-primary transition-all duration-500 placeholder:text-muted-foreground/40;
+  @apply bg-transparent border-0 border-b border-foreground/20 rounded-none px-0 py-4 text-xs tracking-[0.3em] uppercase focus-visible:ring-0 focus-visible:border-primary transition-all duration-500 placeholder:text-muted-foreground/30;
 }
 
 .hover-gold {
@@ -89,9 +89,9 @@
 }
 
 .charcoal-bg {
-  background-color: #1F1F1F;
+  background-color: #1C2630; /* Midnight Blue-Charcoal */
 }
 
 .ivory-bg {
-  background-color: #F5F1EB;
+  background-color: #F4F1EC; /* Warm Ivory */
 }
