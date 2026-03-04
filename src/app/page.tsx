@@ -2,7 +2,7 @@ import { Navbar } from '@/components/navbar';
 import { Hero } from '@/components/sections/hero';
 import { About } from '@/components/sections/about';
 import { Projects } from '@/components/sections/projects';
-import { Philosophy } from '@/components/sections/philosophy';
+import { IntelligentLuxury } from '@/components/sections/intelligent-luxury';
 import { Contact } from '@/components/sections/contact';
 import { Footer } from '@/components/footer';
 
@@ -13,7 +13,7 @@ export default function Home() {
       <Hero />
       <About />
       <Projects />
-      <Philosophy />
+      <IntelligentLuxury />
       <Contact />
       <Footer />
     </main>
