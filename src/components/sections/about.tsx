@@ -1,35 +1,60 @@
 'use client';
 
 import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-
-const values = [
-  { title: "Intelligent Design", desc: "Form follows thought in every detail." },
-  { title: "Prime Locations", desc: "Curating heritage and lifestyle value." },
-  { title: "Timeless Architecture", desc: "Landmarks that endure through eras." }
-];
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function About() {
-  return (
-    <section id="about" className="section-padding ivory-bg flex flex-col items-center text-center">
-      <div className="max-w-4xl mx-auto mb-20">
-        <h2 className="text-4xl md:text-6xl font-serif text-foreground mb-6">Who We Are</h2>
-        <div className="w-24 h-[1px] bg-primary mx-auto mb-10" />
-        <p className="text-lg md:text-xl font-light text-foreground/70 leading-relaxed max-w-2xl mx-auto">
-          ViMond Realty is an architectural powerhouse dedicated to redefining the Pune skyline. We believe luxury is the thoughtful response to modern living, executed with precision and artistry.
-        </p>
-      </div>
+  const aboutImg = PlaceHolderImages.find(img => img.id === 'office-space');
 
-      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
-        {values.map((val, idx) => (
-          <Card key={idx} className="bg-white/50 border-none shadow-sm hover:shadow-md transition-shadow duration-500 rounded-none overflow-hidden group">
-            <CardContent className="p-12">
-              <span className="text-[10px] tracking-[0.4em] uppercase text-primary mb-6 block font-bold">Value 0{idx + 1}</span>
-              <h3 className="text-2xl font-serif mb-4 group-hover:text-primary transition-colors">{val.title}</h3>
-              <p className="text-sm font-light text-foreground/50 tracking-wide">{val.desc}</p>
-            </CardContent>
-          </Card>
-        ))}
+  return (
+    <section id="about" className="section-padding bg-background">
+      <div className="asymmetric-container">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-32">
+          <div>
+            <h2 className="text-5xl md:text-7xl font-serif text-foreground uppercase tracking-tighter mb-4">
+              Who <br /> We Are<span className="text-primary italic">.</span>
+            </h2>
+            <div className="w-24 h-[1px] bg-primary/30" />
+          </div>
+          <div className="space-y-8">
+            <p className="text-xl md:text-2xl font-light text-foreground/80 leading-relaxed">
+              ViMond Realty is an architectural powerhouse dedicated to redefining the Pune skyline. We believe luxury is the thoughtful response to modern living, executed with precision and artistry.
+            </p>
+          </div>
+        </div>
+
+        <div className="relative mt-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10 bg-[#F8F6F2]/80 backdrop-blur-sm p-12 -mt-40 md:ml-24 max-w-4xl border border-primary/5">
+            <div className="space-y-4">
+              <span className="text-[10px] tracking-[0.4em] uppercase text-primary font-bold">01</span>
+              <h3 className="text-2xl font-serif">Intelligent Design</h3>
+              <p className="text-xs font-light text-foreground/50 leading-relaxed">Form follows thought in every detail, crafted for the modern soul.</p>
+            </div>
+            <div className="space-y-4">
+              <span className="text-[10px] tracking-[0.4em] uppercase text-primary font-bold">02</span>
+              <h3 className="text-2xl font-serif">Prime Locations</h3>
+              <p className="text-xs font-light text-foreground/50 leading-relaxed">Curating heritage and lifestyle value in Pune's most coveted pockets.</p>
+            </div>
+            <div className="space-y-4">
+              <span className="text-[10px] tracking-[0.4em] uppercase text-primary font-bold">03</span>
+              <h3 className="text-2xl font-serif">Timeless Art</h3>
+              <p className="text-xs font-light text-foreground/50 leading-relaxed">Architecture that remains elegant for decades, enduring through eras.</p>
+            </div>
+          </div>
+          
+          <div className="absolute top-0 right-0 w-full md:w-3/4 aspect-video -z-10 opacity-40">
+            {aboutImg?.imageUrl && (
+              <Image 
+                src={aboutImg.imageUrl} 
+                alt="Architecture detail" 
+                fill 
+                className="object-cover grayscale"
+                data-ai-hint={aboutImg.imageHint}
+              />
+            )}
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -2,94 +2,43 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Instagram, Linkedin, Facebook, Twitter } from 'lucide-react';
 
 export function Footer() {
-  const socialLinks = [
-    { icon: <Instagram className="w-4 h-4" />, href: "#" },
-    { icon: <Linkedin className="w-4 h-4" />, href: "#" },
-    { icon: <Facebook className="w-4 h-4" />, href: "#" },
-    { icon: <Twitter className="w-4 h-4" />, href: "#" }
-  ];
-
   return (
-    <footer className="w-full flex flex-col">
-      {/* TOP FOOTER - Light Section */}
-      <section className="ivory-bg py-24 px-8 border-t border-black/5">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-0">
-          
-          {/* Column 1: Contact */}
-          <div className="md:pr-12 md:border-r border-[#B08D57]/20 flex flex-col space-y-6">
-            <h4 className="text-[10px] tracking-[0.5em] uppercase text-[#B08D57] font-bold">Contact</h4>
-            <div className="space-y-4">
-              <div className="space-y-1">
-                <p className="text-[9px] tracking-[0.2em] uppercase text-foreground/40 font-medium">Inquiry</p>
-                <p className="text-sm font-serif text-[#1F1F1F]">+91 (0) 20 2567 0000</p>
-              </div>
-              <div className="space-y-1">
-                <p className="text-[9px] tracking-[0.2em] uppercase text-foreground/40 font-medium">Email</p>
-                <p className="text-sm font-serif text-[#1F1F1F]">inquiry@vmondrealty.com</p>
-              </div>
-            </div>
-          </div>
+    <footer className="stone-bg py-24 border-t border-primary/10">
+      <div className="asymmetric-container flex flex-col items-center text-center space-y-16">
+        <Link href="/" className="text-3xl font-serif tracking-tighter text-foreground uppercase">
+          ViMond<span className="text-primary italic">.</span>
+        </Link>
 
-          {/* Column 2: Office Address */}
-          <div className="md:px-12 md:border-r border-[#B08D57]/20 flex flex-col space-y-6">
-            <h4 className="text-[10px] tracking-[0.5em] uppercase text-[#B08D57] font-bold">Office</h4>
-            <div className="space-y-2">
-              <p className="text-sm font-serif text-[#1F1F1F] leading-relaxed">
-                ViMond Landmark, <br />
-                Lane No. 7, Koregaon Park, <br />
-                Pune, Maharashtra 411001
-              </p>
-            </div>
-          </div>
-
-          {/* Column 3: Quick Links */}
-          <div className="md:pl-12 flex flex-col space-y-6">
-            <h4 className="text-[10px] tracking-[0.5em] uppercase text-[#B08D57] font-bold">Explore</h4>
-            <nav className="flex flex-col space-y-3">
-              <Link href="/about" className="text-xs tracking-widest uppercase hover:text-[#B08D57] transition-colors w-fit">About</Link>
-              <Link href="/projects/ongoing" className="text-xs tracking-widest uppercase hover:text-[#B08D57] transition-colors w-fit">Projects</Link>
-              <Link href="/luxury" className="text-xs tracking-widest uppercase hover:text-[#B08D57] transition-colors w-fit">Intelligent Luxury</Link>
-              <Link href="/contact" className="text-xs tracking-widest uppercase hover:text-[#B08D57] transition-colors w-fit">Contact</Link>
-            </nav>
-          </div>
-
+        <div className="flex flex-wrap justify-center gap-x-16 gap-y-4">
+          <p className="text-[10px] tracking-[0.3em] uppercase text-foreground/60">+91 20 2567 0000</p>
+          <p className="text-[10px] tracking-[0.3em] uppercase text-foreground/60">inquiry@vmondrealty.com</p>
+          <p className="text-[10px] tracking-[0.3em] uppercase text-foreground/60">Koregaon Park, Pune</p>
         </div>
-      </section>
 
-      {/* MIDDLE STRIP - Dark Section */}
-      <section className="charcoal-bg py-10 border-y border-white/5">
-        <div className="max-w-7xl mx-auto px-8 flex justify-center gap-6">
-          {socialLinks.map((social, idx) => (
-            <a 
-              key={idx} 
-              href={social.href}
-              className="w-10 h-10 rounded-full border border-[#B08D57]/30 flex items-center justify-center text-[#B08D57] hover:bg-[#B08D57] hover:text-[#1C2630] transition-all duration-500 group"
+        <div className="flex gap-12">
+          {['Instagram', 'LinkedIn', 'Facebook'].map((social) => (
+            <Link 
+              key={social} 
+              href="#" 
+              className="text-[9px] tracking-[0.5em] uppercase text-primary hover:text-foreground transition-colors"
             >
-              {social.icon}
-            </a>
+              {social}
+            </Link>
           ))}
         </div>
-      </section>
 
-      {/* BOTTOM STRIP - Minimal */}
-      <section className="bg-[#D6C6B8] py-8 px-8">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[9px] tracking-[0.3em] uppercase text-[#1F1F1F]/50 font-medium">
-            © 2025 Vimond Realty. All Rights Reserved.
-          </p>
+        <div className="editorial-divider max-w-7xl" />
+
+        <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] tracking-[0.3em] uppercase text-foreground/30">
+          <p>© 2025 Vimond Realty. All Rights Reserved.</p>
           <div className="flex gap-8">
-            <Link href="#" className="text-[9px] tracking-[0.3em] uppercase text-[#1F1F1F]/50 font-medium hover:text-[#B08D57] transition-colors">
-              Disclaimer
-            </Link>
-            <Link href="#" className="text-[9px] tracking-[0.3em] uppercase text-[#1F1F1F]/50 font-medium hover:text-[#B08D57] transition-colors">
-              Privacy Policy
-            </Link>
+            <Link href="#" className="hover:text-primary transition-colors">Disclaimer</Link>
+            <Link href="#" className="hover:text-primary transition-colors">Privacy</Link>
           </div>
         </div>
-      </section>
+      </div>
     </footer>
   );
 }

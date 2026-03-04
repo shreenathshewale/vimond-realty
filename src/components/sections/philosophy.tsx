@@ -1,37 +1,35 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+
+const principles = [
+  { title: "Intelligent Design", desc: "Functional spaces crafted with absolute precision." },
+  { title: "Prime Locations", desc: "Strategically located in Pune’s most desirable historical areas." },
+  { title: "Timeless Architecture", desc: "Design that remains elegant and relevant for decades." }
+];
 
 export function Philosophy() {
-  const officeImg = PlaceHolderImages.find(img => img.id === 'office-space');
-
   return (
-    <section id="philosophy" className="py-60 bg-background overflow-hidden">
-      <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center gap-32">
-        <div className="md:w-1/2">
-          <span className="text-[9px] tracking-[0.6em] uppercase text-primary font-medium mb-12 block">Philosophy</span>
-          <h2 className="text-4xl md:text-7xl font-serif font-light leading-[1.1] text-white mb-16">
-            Form follows <span className="italic text-primary">intelligence</span> in every space we create.
+    <section id="luxury" className="section-padding bg-background">
+      <div className="asymmetric-container">
+        <div className="max-w-4xl">
+          <h2 className="text-5xl md:text-8xl font-serif text-foreground uppercase tracking-tighter mb-24">
+            Intelligent <br /><span className="italic">Living.</span>
           </h2>
-          <p className="text-[12px] tracking-[0.1em] text-white/50 leading-relaxed font-light max-w-md">
-            We believe that luxury is not just about aesthetics, but about how a space functions and responds to the needs of modern living.
-          </p>
-        </div>
-        <div className="md:w-1/2 relative aspect-square w-full">
-          <div className="absolute inset-0 border border-primary/20 translate-x-12 translate-y-12 z-0" />
-          {officeImg?.imageUrl && (
-            <div className="relative z-10 w-full h-full">
-              <Image
-                src={officeImg.imageUrl}
-                alt="Intelligent Luxury"
-                fill
-                className="object-cover grayscale"
-                data-ai-hint={officeImg.imageHint}
-              />
-            </div>
-          )}
+          
+          <div className="space-y-32">
+            {principles.map((p, idx) => (
+              <div key={idx} className="flex flex-col md:flex-row gap-8 md:gap-24 items-start">
+                <span className="text-[10px] font-bold text-primary/30 mt-2">0{idx + 1}</span>
+                <div className="space-y-6">
+                  <h3 className="text-4xl md:text-6xl font-serif uppercase tracking-tight">{p.title}</h3>
+                  <p className="text-xl md:text-2xl font-light text-foreground/50 leading-relaxed max-w-2xl">
+                    {p.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -4,85 +4,52 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin } from 'lucide-react';
 
 export function Contact() {
   return (
-    <section id="contact" className="min-h-screen flex flex-col md:flex-row border-t border-black/5">
-      {/* Left Side - Dark Section */}
-      <div className="w-full md:w-2/5 charcoal-bg p-12 md:p-24 flex flex-col justify-center">
-        <div className="space-y-16">
-          <h2 className="text-4xl md:text-6xl font-serif text-[#F4F1EC] leading-tight">
-            Connect with <br /> <span className="italic text-[#B08D57]">Excellence.</span>
-          </h2>
-          
-          <div className="space-y-10">
-            <div className="flex items-center gap-6 group">
-              <div className="p-3 border border-[#B08D57]/30 text-[#B08D57] group-hover:bg-[#B08D57] group-hover:text-[#1C2630] transition-all">
-                <MapPin className="w-4 h-4" />
+    <section id="contact" className="section-padding stone-bg">
+      <div className="asymmetric-container">
+        <div className="flex flex-col md:flex-row gap-24 md:gap-40">
+          <div className="md:w-1/3 space-y-24">
+            <h2 className="text-5xl md:text-7xl font-serif text-foreground uppercase tracking-tighter">
+              The <br /><span className="italic text-primary">Inquiry.</span>
+            </h2>
+            
+            <div className="space-y-12">
+              <div className="space-y-2">
+                <p className="text-[10px] tracking-[0.4em] uppercase text-primary font-bold">Call Us</p>
+                <p className="text-lg font-serif">+91 (0) 20 2567 0000</p>
               </div>
-              <div>
-                <p className="text-[9px] tracking-[0.3em] uppercase text-[#F4F1EC]/40 mb-1">Address</p>
-                <p className="text-sm font-light text-[#F4F1EC]">Pune, Maharashtra, India</p>
+              <div className="space-y-2">
+                <p className="text-[10px] tracking-[0.4em] uppercase text-primary font-bold">Write Us</p>
+                <p className="text-lg font-serif">inquiry@vmondrealty.com</p>
+              </div>
+              <div className="space-y-2">
+                <p className="text-[10px] tracking-[0.4em] uppercase text-primary font-bold">Visit Us</p>
+                <p className="text-sm font-light text-foreground/60 leading-relaxed">
+                  ViMond Landmark, Lane No. 7, <br />
+                  Koregaon Park, Pune 411001
+                </p>
               </div>
             </div>
+          </div>
 
-            <div className="flex items-center gap-6 group">
-              <div className="p-3 border border-[#B08D57]/30 text-[#B08D57] group-hover:bg-[#B08D57] group-hover:text-[#1C2630] transition-all">
-                <Mail className="w-4 h-4" />
+          <div className="md:w-2/3">
+            <form className="space-y-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+                <Input placeholder="YOUR NAME" className="luxury-underline-input border-foreground/10" />
+                <Input placeholder="EMAIL ADDRESS" className="luxury-underline-input border-foreground/10" />
+                <Input placeholder="PHONE NUMBER" className="luxury-underline-input border-foreground/10" />
+                <Input placeholder="SUBJECT" className="luxury-underline-input border-foreground/10" />
               </div>
-              <div>
-                <p className="text-[9px] tracking-[0.3em] uppercase text-[#F4F1EC]/40 mb-1">Email</p>
-                <p className="text-sm font-light text-[#F4F1EC]">inquiry@vmondrealty.com</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-6 group">
-              <div className="p-3 border border-[#B08D57]/30 text-[#B08D57] group-hover:bg-[#B08D57] group-hover:text-[#1C2630] transition-all">
-                <Phone className="w-4 h-4" />
-              </div>
-              <div>
-                <p className="text-[9px] tracking-[0.3em] uppercase text-[#F4F1EC]/40 mb-1">Call</p>
-                <p className="text-sm font-light text-[#F4F1EC]">+91 (0) 20 2567 0000</p>
-              </div>
-            </div>
+              <Textarea placeholder="MESSAGE" className="luxury-underline-input min-h-[120px] border-foreground/10" />
+              
+              <Button className="h-16 px-16 rounded-none bg-primary text-white text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-[#766854] transition-all">
+                Send Message
+              </Button>
+            </form>
           </div>
         </div>
-      </div>
-
-      {/* Right Side - Light Section */}
-      <div className="w-full md:w-3/5 ivory-bg p-12 md:p-32 flex flex-col justify-center">
-        <form className="space-y-12 max-w-xl w-full">
-          <div className="space-y-8">
-            <div className="group">
-              <Input 
-                placeholder="FULL NAME" 
-                className="luxury-input"
-              />
-            </div>
-            <div className="group">
-              <Input 
-                placeholder="EMAIL ADDRESS" 
-                className="luxury-input"
-              />
-            </div>
-            <div className="group">
-              <Input 
-                placeholder="PHONE NUMBER" 
-                className="luxury-input"
-              />
-            </div>
-            <div className="group">
-              <Textarea 
-                placeholder="YOUR MESSAGE" 
-                className="luxury-input min-h-[100px] resize-none"
-              />
-            </div>
-          </div>
-          <Button className="w-full h-16 rounded-none bg-[#B08D57] text-[#F4F1EC] text-[11px] tracking-[0.5em] uppercase font-bold hover:bg-[#967849] transition-all shadow-xl">
-            Submit Inquiry
-          </Button>
-        </form>
       </div>
     </section>
   );
