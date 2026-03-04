@@ -1,65 +1,70 @@
-
 {
   "placeholderImages": [
     {
       "id": "hero-video-alt",
       "description": "Luxury real estate development exterior",
-      "imageUrl": "https://picsum.photos/seed/vimond1/1920/1080",
+      "imageUrl": "https://images.unsplash.com/photo-1735282044858-287a840901e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bHV4dXJ5JTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc3MjQ1MzM3MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "luxury architecture"
     },
     {
       "id": "vivencia-project",
       "description": "Vivencia project in Koregaon Park",
-      "imageUrl": "https://picsum.photos/seed/vimond2/800/600",
+      "imageUrl": "https://images.unsplash.com/photo-1662454419736-de132ff75638?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBhcGFydG1lbnR8ZW58MHx8fHwxNzcyMzg0MDM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern apartment"
     },
     {
       "id": "signature-tower",
       "description": "Signature Tower II project",
-      "imageUrl": "https://picsum.photos/seed/vimond3/800/600",
+      "imageUrl": "https://images.unsplash.com/photo-1760799253851-1960e4f6ba50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyZXNpZGVudGlhbCUyMHRvd2VyfGVufDB8fHx8MTc3MjQ1MzM3MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "residential tower"
     },
     {
       "id": "verista-project",
       "description": "Verïsta project Law College Road",
-      "imageUrl": "https://picsum.photos/seed/vimond4/800/600",
+      "imageUrl": "https://images.unsplash.com/photo-1650611673307-5058c43fcd63?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb250ZW1wb3JhcnklMjBob21lfGVufDB8fHx8MTc3MjQ1MzM3MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "contemporary home"
     },
     {
       "id": "city-skyline",
       "description": "Pune city skyline",
-      "imageUrl": "https://picsum.photos/seed/vimond5/1200/800",
+      "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaXR5JTIwc2t5bGluZXxlbnwwfHx8fDE3NzI0NTMzNzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "city skyline"
     },
     {
       "id": "office-space",
       "description": "Modern collaborative office",
-      "imageUrl": "https://picsum.photos/seed/vimond6/1200/800",
+      "imageUrl": "https://images.unsplash.com/photo-1525896544042-354764aa27e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZXJuJTIwb2ZmaWNlfGVufDB8fHx8MTc3MjQ1MjMwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern office"
     },
     {
       "id": "koregaon-park",
       "description": "Lush tree-lined avenue in Koregaon Park",
-      "imageUrl": "https://picsum.photos/seed/vimond7/1200/800",
+      "imageUrl": "https://images.unsplash.com/photo-1736927053087-1d75a6dcc283?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0cmVlJTIwYXZlbnVlfGVufDB8fHx8MTc3MjQ1MzM3MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "tree avenue"
     },
     {
       "id": "blog-1",
       "description": "Architectural inspiration",
-      "imageUrl": "https://picsum.photos/seed/vimond8/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1742845873557-9ba9cb0691ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YXJjaGl0ZWN0dXJlJTIwZGV0YWlsc3xlbnwwfHx8fDE3NzI0NTMzNzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "architecture details"
     },
     {
       "id": "blog-2",
       "description": "Prime location concept",
-      "imageUrl": "https://picsum.photos/seed/vimond9/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1573845105959-48591b7fd566?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxuZWlnaGJvcmhvb2QlMjBzdHJlZXR8ZW58MHx8fHwxNzcyNDUzMzcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "neighborhood street"
     },
     {
       "id": "blog-3",
       "description": "Intelligent luxury living",
-      "imageUrl": "https://picsum.photos/seed/vimond10/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsdXh1cnklMjBpbnRlcmlvcnxlbnwwfHx8fDE3NzI0NTA3NDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "luxury interior"
+    },
+    {
+      "id": "founder-portrait",
+      "description": "Mr. Vijay Munde, Founder of ViMond Realty",
+      "imageUrl": "https://picsum.photos/seed/vimond-founder/800/1000",
+      "imageHint": "man portrait"
     }
   ]
 }

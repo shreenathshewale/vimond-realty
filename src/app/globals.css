@@ -4,20 +4,20 @@
 
 @layer base {
   :root {
-    --background: 40 20% 96%; /* #F8F6F2 - Warm Gallery White */
-    --foreground: 0 0% 16%; /* #2A2A2A - Text */
-    --card: 40 20% 94%;
-    --card-foreground: 0 0% 16%;
-    --popover: 40 20% 96%;
-    --popover-foreground: 0 0% 16%;
+    --background: 36 17% 96%; /* #F7F5F2 - Warm Gallery White */
+    --foreground: 0 0% 17%; /* #2B2B2B - Text */
+    --card: 39 17% 91%; /* #ECE8E1 - Section Contrast */
+    --card-foreground: 0 0% 17%;
+    --popover: 36 17% 96%;
+    --popover-foreground: 0 0% 17%;
     --primary: 36 17% 46%; /* #8A7A63 - Bronze Stone */
-    --primary-foreground: 40 20% 96%;
-    --secondary: 38 10% 88%; /* #E7E3DC - Stone Beige */
-    --secondary-foreground: 0 0% 16%;
+    --primary-foreground: 36 17% 96%;
+    --secondary: 38 10% 80%; /* #D8D2C8 - Soft Border */
+    --secondary-foreground: 0 0% 17%;
     --muted: 38 12% 76%; /* #CFC6B8 - Light Clay */
     --muted-foreground: 0 0% 45%;
     --accent: 36 17% 46%;
-    --accent-foreground: 40 20% 96%;
+    --accent-foreground: 36 17% 96%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 20% 98%;
     --border: 38 10% 80%;
@@ -56,7 +56,7 @@
 }
 
 .stone-bg {
-  background-color: #E7E3DC;
+  background-color: #ECE8E1;
 }
 
 .bronze-text {
