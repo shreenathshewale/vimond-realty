@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -57,7 +56,7 @@ export function AIAssistant() {
             <div className="h-full flex flex-col items-center justify-center text-muted-foreground gap-2">
               <p>How can I help you today?</p>
               <div className="flex flex-wrap justify-center gap-2">
-                {['About Vivencia', 'Our Philosophy', 'Current Locations'].map((text) => (
+                {['About Vivencia', 'Intelligent Luxury', 'Current Locations'].map((text) => (
                   <button
                     key={text}
                     onClick={() => setQuestion(text)}

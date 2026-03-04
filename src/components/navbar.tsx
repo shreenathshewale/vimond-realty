@@ -46,7 +46,7 @@ export function Navbar() {
           </DropdownMenu>
 
           <Link href="/luxury" className={cn("text-[10px] tracking-[0.3em] uppercase hover:text-primary transition-colors", pathname === '/luxury' && "text-primary")}>
-            Philosophy
+            Intelligent Luxury
           </Link>
           <Link href="/contact" className={cn("text-[10px] tracking-[0.3em] uppercase hover:text-primary transition-colors", pathname === '/contact' && "text-primary")}>
             Contact
