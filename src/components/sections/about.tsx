@@ -22,9 +22,10 @@ export function About() {
             <div className="relative aspect-[3/4] overflow-hidden group">
               <Image 
                 src="/images/who.png" 
-                alt="Who We Are - ViMond Realty" 
-                fill 
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                alt="Who We Are - Vimond Realty" 
+                width={900}
+                height={600}
+                className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500" />
             </div>
