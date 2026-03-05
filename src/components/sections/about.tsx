@@ -21,7 +21,7 @@ export function About() {
             
             <div className="relative aspect-[3/4] overflow-hidden group">
               <Image 
-                src="/images/who.png" 
+                src="/images/we.png" 
                 alt="Who We Are - Vimond Realty" 
                 width={900}
                 height={600}
