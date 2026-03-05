@@ -24,14 +24,14 @@ export function Hero() {
       </div>
       
       <motion.div 
-        className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] px-4 sm:px-8 md:px-24"
+        className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] px-4 sm:px-8 md:px-24"
         initial={{ opacity: 0, scale: 1.05 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
       >
         <div className="relative w-full h-full overflow-hidden shadow-2xl">
           <Image
-            src="/images/Hero.png"
+            src="/images/hero.jpg"
             alt="ViMond Realty Luxury Living"
             fill
             className="w-full h-full object-cover"
