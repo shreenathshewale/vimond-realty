@@ -80,7 +80,7 @@ export function IntelligentLuxury() {
                     src={img.imageUrl} 
                     alt={card.title} 
                     fill 
-                    className="object-cover transition-all duration-1000 group-hover:scale-110 group-hover:brightness-75"
+                    className="object-cover transition-all duration-1000 group-hover:scale-110"
                     data-ai-hint={img.imageHint}
                   />
                 )}
