@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -35,7 +34,7 @@ export function Hero() {
             src="/images/Hero.png"
             alt="ViMond Realty Luxury Living"
             fill
-            className="w-full h-full object-cover grayscale brightness-75 contrast-110"
+            className="w-full h-full object-cover brightness-75 contrast-110"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#2F2F2F]/40 to-transparent" />

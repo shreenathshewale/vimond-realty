@@ -1,4 +1,3 @@
-
 'use client';
 
 import { Navbar } from '@/components/navbar';
@@ -34,7 +33,7 @@ export default function AboutPage() {
                 src="/images/about.png" 
                 alt="Architecture Studio" 
                 fill 
-                className="w-full h-full object-cover grayscale transition-transform duration-1000 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors" />
               <div className="absolute -top-4 -left-4 w-16 h-16 md:w-24 md:h-24 border-l-2 border-t-2 border-primary/20 -z-10" />
@@ -129,7 +128,7 @@ export default function AboutPage() {
             transition={{ duration: 1.2 }}
           >
             <div className="absolute -top-6 -right-6 md:-top-12 md:-right-12 w-full h-full bg-secondary/20 -z-10" />
-            <div className="relative aspect-[4/5] overflow-hidden grayscale shadow-2xl">
+            <div className="relative aspect-[4/5] overflow-hidden shadow-2xl">
               <Image 
                 src="/images/Vijay.png" 
                 alt="Mr. Vijay Munde" 

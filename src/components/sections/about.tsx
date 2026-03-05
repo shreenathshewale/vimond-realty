@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -25,7 +24,7 @@ export function About() {
                 src="/images/who.png" 
                 alt="Who We Are - ViMond Realty" 
                 fill 
-                className="w-full h-full object-cover grayscale transition-transform duration-1000 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500" />
             </div>

@@ -20,7 +20,7 @@ export default function ContactPage() {
               src={contactImg.imageUrl} 
               alt="Pune" 
               fill 
-              className="object-cover grayscale opacity-50"
+              className="object-cover opacity-50"
               data-ai-hint={contactImg.imageHint}
             />
           )}

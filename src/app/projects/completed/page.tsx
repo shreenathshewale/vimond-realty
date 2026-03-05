@@ -1,4 +1,3 @@
-
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import Image from 'next/image';
@@ -26,7 +25,7 @@ export default function CompletedProjectsPage() {
                       src={project.imagePath} 
                       alt={project.title} 
                       fill 
-                      className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                      className="w-full h-full object-cover transition-all duration-1000"
                     />
                   </div>
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-black/5 pb-6 md:pb-8 gap-4">

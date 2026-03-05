@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -8,7 +7,7 @@ import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 const projects = [
-  { title: 'Vivencia', location: 'Koregaon Park', imagePath: '/images/Vivencia.png', layout: 'full' },
+  { title: 'Vivencia', location: 'Koregaon Park', imagePath: '/images/Vivenica.png', layout: 'full' },
   { title: 'Signature Tower II', location: 'Model Colony', imagePath: '/images/Signature.png', layout: 'split-left' },
   { title: 'Verïsta', location: 'Law College Road', imagePath: '/images/Verista.png', layout: 'split-right' }
 ];
@@ -45,7 +44,7 @@ export function Projects() {
                       src={project.imagePath}
                       alt={project.title}
                       fill
-                      className="w-full h-full object-cover grayscale brightness-90 transition-transform duration-1000 group-hover:scale-105 group-hover:grayscale-0"
+                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   </div>
@@ -82,7 +81,7 @@ export function Projects() {
                       src={project.imagePath}
                       alt={project.title}
                       fill
-                      className="w-full h-full object-cover grayscale brightness-90 transition-transform duration-1000 group-hover:scale-105 group-hover:grayscale-0"
+                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                     />
                   </div>
                   {/* Floating Architectural Background */}

@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -81,7 +80,7 @@ export function IntelligentLuxury() {
                     src={img.imageUrl} 
                     alt={card.title} 
                     fill 
-                    className="object-cover grayscale brightness-50 transition-all duration-1000 group-hover:scale-110 group-hover:grayscale-0 group-hover:brightness-75"
+                    className="object-cover transition-all duration-1000 group-hover:scale-110 group-hover:brightness-75"
                     data-ai-hint={img.imageHint}
                   />
                 )}

@@ -1,4 +1,3 @@
-
 'use client';
 
 import { Navbar } from '@/components/navbar';
@@ -7,7 +6,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const ongoingProjects = [
-  { imagePath: '/images/Vivencia.png', title: 'Vivencia', location: 'Koregaon Park', tagline: 'A landmark of tree-lined elegance.' },
+  { imagePath: '/images/Vivenica.png', title: 'Vivencia', location: 'Koregaon Park', tagline: 'A landmark of tree-lined elegance.' },
   { imagePath: '/images/Verista.png', title: 'Verïsta', location: 'Law College Road', tagline: 'Contemporary living in a historic heart.' }
 ];
 
@@ -46,7 +45,7 @@ export default function OngoingProjectsPage() {
                         src={project.imagePath} 
                         alt={project.title} 
                         fill 
-                        className="w-full h-full object-cover grayscale brightness-90 transition-all duration-1000 group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-100"
+                        className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 group-hover:brightness-100"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                     </div>
