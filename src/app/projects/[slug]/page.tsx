@@ -34,7 +34,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { cn } from '@/lib/utils';
-import Link from 'next/link';
 import { InquiryPopup } from '@/components/ui/inquiry-popup';
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -68,8 +67,7 @@ export default function ProjectPage() {
   }
 
   const tabs = [
-    { id: 'about', label: 'About' },
-    { id: 'configurations', label: 'Configurations' },
+    { id: 'about', label: 'Details' },
     { id: 'why-us', label: 'Why Us' },
     { id: 'location', label: 'Location' },
     { id: 'faqs', label: 'FAQs' },
@@ -78,7 +76,7 @@ export default function ProjectPage() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 100; // Account for sticky header
+      const offset = 100;
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -132,7 +130,7 @@ export default function ProjectPage() {
                 className="h-14 px-8 rounded-none border-[#8A7A63] text-[#8A7A63] text-[10px] tracking-[0.4em] uppercase font-bold hover:bg-[#8A7A63] hover:text-white transition-all gap-2"
               >
                 <Download className="w-4 h-4" />
-                Download Brochure →
+                Download Brochure
               </Button>
             </div>
           </motion.div>
@@ -173,7 +171,7 @@ export default function ProjectPage() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-20 py-24 space-y-32">
-        {/* About Section */}
+        {/* Details Section */}
         <section id="about" className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-start">
           <div className="space-y-8">
             <h2 className="text-3xl md:text-5xl font-serif text-[#2B2B2B]">Visionary <br /> Engineering.</h2>
@@ -213,33 +211,13 @@ export default function ProjectPage() {
           </div>
         </section>
 
-        {/* Configurations Section */}
-        {project.configurations && (
-          <section id="configurations" className="space-y-16">
-            <div className="text-center">
-              <span className="text-[10px] tracking-[0.5em] uppercase text-[#8A7A63] font-bold block mb-4">Availability</span>
-              <h2 className="text-4xl md:text-6xl font-serif">Unit Configurations.</h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {project.configurations.map((config, i) => (
-                <div key={i} className="bg-white p-12 border border-[#D8D2C8] text-center space-y-4 hover:shadow-xl transition-shadow">
-                  <h3 className="text-2xl font-serif text-[#2B2B2B]">{config.type}</h3>
-                  <div className="w-8 h-[1px] bg-[#8A7A63]/30 mx-auto" />
-                  <p className="text-[10px] tracking-[0.3em] uppercase text-[#8A7A63] font-bold">Approx. Area</p>
-                  <p className="text-lg font-light italic">{config.area}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-
         {/* Why Us Section */}
         <section id="why-us" className="space-y-16">
           <div className="text-center">
             <span className="text-[10px] tracking-[0.5em] uppercase text-[#8A7A63] font-bold block mb-4">Philosophy</span>
-            <h2 className="text-4xl md:text-6xl font-serif text-center">The ViMond Edge.</h2>
+            <h2 className="text-4xl md:text-6xl font-serif text-center">Why Choose This Project.</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-[#D8D2C8] border border-[#D8D2C8]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-[#D8D2C8] border border-[#D8D2C8]">
             {project.whyUs.map((item, i) => (
               <div key={i} className="bg-[#F7F5F2] p-12 space-y-4 group hover:bg-white transition-colors duration-500">
                 <span className="text-[10px] text-[#8A7A63] font-bold">0{i + 1}</span>
@@ -286,7 +264,7 @@ export default function ProjectPage() {
         {/* FAQ Section */}
         <section id="faqs" className="max-w-3xl mx-auto space-y-16">
           <div className="text-center">
-            <h2 className="text-4xl md:text-6xl font-serif">Inquiry Support.</h2>
+            <h2 className="text-4xl md:text-6xl font-serif">FAQs.</h2>
           </div>
           <Accordion type="single" collapsible className="w-full">
             {project.faqs.map((faq, idx) => (

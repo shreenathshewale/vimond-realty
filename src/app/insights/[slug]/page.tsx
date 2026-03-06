@@ -67,21 +67,18 @@ export default function BlogDetailPage() {
             transition={{ delay: 0.3 }}
           >
             {blog.content.map((paragraph, idx) => (
-              <p key={idx} className="text-lg md:text-xl font-light text-[#2B2B2B]/80 leading-relaxed italic first-letter:text-5xl first-letter:font-serif first-letter:text-[#8A7A63] first-letter:float-left first-letter:mr-3">
+              <p key={idx} className="text-lg md:text-xl font-light text-[#2B2B2B]/80 leading-relaxed italic">
                 {paragraph}
               </p>
             ))}
           </motion.div>
 
           <div className="mt-24 pt-12 border-t border-[#D8D2C8]">
-            <h4 className="text-[10px] tracking-[0.4em] uppercase text-[#8A7A63] font-bold mb-8">Share Insight</h4>
-            <div className="flex gap-4">
-              {['Twitter', 'LinkedIn', 'Facebook'].map(social => (
-                <button key={social} className="text-[10px] tracking-[0.2em] uppercase text-[#2B2B2B]/40 hover:text-[#8A7A63] transition-colors font-bold">
-                  {social}
-                </button>
-              ))}
-            </div>
+            <Link href="/insights">
+              <Button variant="outline" className="rounded-none border-[#8A7A63] text-[#8A7A63] text-[10px] tracking-[0.4em] uppercase font-bold hover:bg-[#8A7A63] hover:text-white transition-all">
+                Back to Insights
+              </Button>
+            </Link>
           </div>
         </div>
       </article>
@@ -90,3 +87,5 @@ export default function BlogDetailPage() {
     </main>
   );
 }
+
+import { Button } from '@/components/ui/button';

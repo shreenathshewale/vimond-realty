@@ -18,7 +18,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, X } from 'lucide-react';
 
 interface InquiryPopupProps {
   isOpen: boolean;
@@ -32,13 +32,12 @@ export function InquiryPopup({ isOpen, onClose, defaultProject }: InquiryPopupPr
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
-    // In a real app, you would send data to a server here.
   };
 
   if (isSubmitted) {
     return (
       <Dialog open={isOpen} onOpenChange={onClose}>
-        <DialogContent className="sm:max-w-[425px] bg-[#F7F5F2] border-[#D8D2C8] rounded-none p-12 text-center">
+        <DialogContent className="sm:max-w-[425px] bg-[#F7F5F2] border-[#D8D2C8] rounded-none p-12 text-center shadow-2xl">
           <div className="flex flex-col items-center space-y-6">
             <CheckCircle2 className="w-16 h-16 text-[#8A7A63]" />
             <div className="space-y-2">
@@ -107,7 +106,7 @@ export function InquiryPopup({ isOpen, onClose, defaultProject }: InquiryPopupPr
             </Select>
 
             <Textarea 
-              placeholder="MESSAGE (OPTIONAL)" 
+              placeholder="MESSAGE" 
               className="min-h-[100px] border-0 border-b border-[#D8D2C8] bg-transparent rounded-none px-0 text-xs tracking-widest uppercase focus-visible:ring-0 focus-visible:border-[#8A7A63] transition-all placeholder:text-[#2B2B2B]/20 resize-none"
             />
           </div>
