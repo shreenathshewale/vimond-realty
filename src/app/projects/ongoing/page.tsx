@@ -47,10 +47,8 @@ export default function OngoingProjectsPage() {
                           fill 
                           className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                       </div>
                     </Link>
-                    <div className={`absolute -z-10 bg-card/50 w-full h-full border border-primary/5 hidden sm:block ${idx % 2 === 0 ? '-top-6 -left-6 md:-top-12 md:-left-12' : '-bottom-6 -right-6 md:-bottom-12 md:-right-12'}`} />
                   </div>
                   
                   <div className="w-full lg:w-2/5 space-y-6 md:space-y-8">
@@ -59,17 +57,14 @@ export default function OngoingProjectsPage() {
                     <p className="text-[10px] tracking-[0.5em] uppercase text-foreground/40">{project.location}</p>
                     <div className="w-12 h-[1px] bg-primary/30" />
                     <p className="text-lg sm:text-xl font-light text-foreground/60 italic leading-relaxed">
-                      {project.description}
+                      {project.tagline}
                     </p>
                     <div className="pt-8 md:pt-12 flex flex-col gap-6">
                        <Link href={`/projects/${project.slug}`}>
                          <span className="text-[10px] tracking-[0.5em] uppercase text-foreground hover:text-primary transition-all font-bold border-b border-primary/20 pb-2 inline-block">
-                           Explore Details →
+                           EXPLORE DETAILS →
                          </span>
                        </Link>
-                       <button className="text-[10px] tracking-[0.5em] uppercase text-foreground/50 hover:text-primary transition-all group border-b border-primary/10 pb-2 w-fit">
-                         Download Brochure <span className="inline-block transform group-hover:translate-x-2 transition-transform">→</span>
-                       </button>
                     </div>
                   </div>
                 </motion.div>

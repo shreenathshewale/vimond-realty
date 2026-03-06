@@ -55,12 +55,12 @@ export default function CompletedProjectsPage() {
                       <div className="mt-6">
                         <Link href={`/projects/${project.slug}`}>
                           <span className="text-[10px] tracking-[0.5em] uppercase text-foreground hover:text-primary transition-all font-bold border-b border-primary/20 pb-2 inline-block">
-                            Explore Details →
+                            EXPLORE DETAILS →
                           </span>
                         </Link>
                       </div>
                     </div>
-                    <p className="text-sm italic text-foreground/40 max-w-xs">{project.description}</p>
+                    <p className="text-sm italic text-foreground/40 max-w-xs">{project.tagline}</p>
                   </div>
                 </motion.div>
               );
