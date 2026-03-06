@@ -5,13 +5,11 @@ import { Footer } from '@/components/footer';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-
-const ongoingProjects = [
-  { imagePath: '/images/Vivenica.png', title: 'Vivencia', location: 'Koregaon Park', tagline: 'A landmark of tree-lined elegance.', slug: 'vivencia' },
-  { imagePath: '/images/Verista.png', title: 'Verïsta', location: 'Law College Road', tagline: 'Contemporary living in a historic heart.', slug: 'verista' }
-];
+import { projects } from '@/data/projects';
 
 export default function OngoingProjectsPage() {
+  const ongoingProjects = projects.filter(p => p.status === 'ongoing');
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Navbar />
@@ -33,7 +31,7 @@ export default function OngoingProjectsPage() {
             {ongoingProjects.map((project, idx) => {
               return (
                 <motion.div 
-                  key={project.title} 
+                  key={project.slug} 
                   className={`flex flex-col lg:flex-row gap-12 lg:gap-24 items-center ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -44,25 +42,24 @@ export default function OngoingProjectsPage() {
                     <Link href={`/projects/${project.slug}`}>
                       <div className="relative aspect-[4/5] overflow-hidden shadow-2xl">
                         <Image 
-                          src={project.imagePath} 
-                          alt={project.title} 
+                          src={project.image} 
+                          alt={project.name} 
                           fill 
                           className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                       </div>
                     </Link>
-                    {/* Architectural Frame Offset */}
                     <div className={`absolute -z-10 bg-card/50 w-full h-full border border-primary/5 hidden sm:block ${idx % 2 === 0 ? '-top-6 -left-6 md:-top-12 md:-left-12' : '-bottom-6 -right-6 md:-bottom-12 md:-right-12'}`} />
                   </div>
                   
                   <div className="w-full lg:w-2/5 space-y-6 md:space-y-8">
                     <span className="text-[10px] tracking-[0.5em] uppercase text-primary font-bold">Location No. 0{idx + 1}</span>
-                    <h3 className="text-4xl sm:text-5xl md:text-7xl font-serif leading-none">{project.title}</h3>
+                    <h3 className="text-4xl sm:text-5xl md:text-7xl font-serif leading-none">{project.name}</h3>
                     <p className="text-[10px] tracking-[0.5em] uppercase text-foreground/40">{project.location}</p>
                     <div className="w-12 h-[1px] bg-primary/30" />
                     <p className="text-lg sm:text-xl font-light text-foreground/60 italic leading-relaxed">
-                      {project.tagline}
+                      {project.description}
                     </p>
                     <div className="pt-8 md:pt-12 flex flex-col gap-6">
                        <Link href={`/projects/${project.slug}`}>
