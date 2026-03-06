@@ -8,6 +8,9 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 export default function SignaturePage() {
+  const amenities = ['Wellness Center', 'Business Lounge', 'Children Play Area', 'Rooftop Skywalk'];
+  const advantages = ['Model Colony Tranquility', 'Easy Access to Pune University', 'Premier Neighborhood'];
+
   return (
     <main className="min-h-screen bg-[#F7F5F2]">
       <Navbar />
@@ -39,13 +42,21 @@ export default function SignaturePage() {
             />
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-start mb-32">
             <div className="space-y-8">
               <h2 className="text-3xl md:text-5xl font-serif">A legacy <br /> redefined.</h2>
               <div className="w-16 h-[1px] bg-[#8A7A63]/30" />
               <p className="text-xl font-light text-[#2B2B2B]/70 leading-relaxed italic">
                 Signature Tower II represents the peak of architectural mastery in Model Colony, setting new benchmarks for urban sophistication.
               </p>
+              <div className="pt-8">
+                <h4 className="text-[10px] tracking-[0.4em] uppercase text-[#8A7A63] font-bold mb-6">Key Features</h4>
+                <ul className="space-y-4 text-sm font-light text-[#2B2B2B]/60 italic">
+                  <li>• Iconic Vertical Facade</li>
+                  <li>• Double Height Grand Lobby</li>
+                  <li>• Precision Sound-Proofing</li>
+                </ul>
+              </div>
             </div>
             
             <div className="space-y-12">
@@ -53,20 +64,24 @@ export default function SignaturePage() {
                 As a landmark development, Signature is designed for those who appreciate the finer nuances of living. The project integrates dynamic building methods with absolute precision engineering, resulting in a landmark that remains elegant and relevant across decades.
               </p>
               
-              <div className="grid grid-cols-2 gap-8 border-t border-[#D8D2C8] pt-12">
+              <div className="grid grid-cols-2 gap-12 border-y border-[#D8D2C8] py-12">
                 <div>
-                  <h4 className="text-[10px] tracking-[0.4em] uppercase text-[#8A7A63] font-bold mb-4">Status</h4>
-                  <p className="text-sm font-light text-[#2B2B2B]/60 uppercase tracking-widest">Completed</p>
+                  <h4 className="text-[10px] tracking-[0.4em] uppercase text-[#8A7A63] font-bold mb-4">Amenities</h4>
+                  <ul className="text-[10px] tracking-[0.2em] uppercase text-[#2B2B2B]/50 space-y-2">
+                    {amenities.map((item, i) => <li key={i}>{item}</li>)}
+                  </ul>
                 </div>
                 <div>
-                  <h4 className="text-[10px] tracking-[0.4em] uppercase text-[#8A7A63] font-bold mb-4">Typology</h4>
-                  <p className="text-sm font-light text-[#2B2B2B]/60 uppercase tracking-widest">Iconic Tower</p>
+                  <h4 className="text-[10px] tracking-[0.4em] uppercase text-[#8A7A63] font-bold mb-4">Location</h4>
+                  <ul className="text-[10px] tracking-[0.2em] uppercase text-[#2B2B2B]/50 space-y-2">
+                    {advantages.map((item, i) => <li key={i}>{item}</li>)}
+                  </ul>
                 </div>
               </div>
 
               <div className="pt-8">
                 <Link href="/contact">
-                  <Button className="h-16 px-12 rounded-none bg-[#2B2B2B] text-[#F7F5F2] text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-[#8A7A63] transition-all">
+                  <Button className="h-16 px-12 rounded-none bg-[#2B2B2B] text-[#F7F5F2] text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-[#8A7A63] transition-all w-full md:w-auto">
                     Inquire Now
                   </Button>
                 </Link>
