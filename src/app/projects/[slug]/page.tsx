@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import { projects } from '@/data/projects';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
@@ -24,7 +24,8 @@ import {
   Home, 
   Heart, 
   Briefcase,
-  ExternalLink
+  Smile,
+  Star
 } from 'lucide-react';
 import {
   Accordion,
@@ -45,6 +46,8 @@ const iconMap: Record<string, React.ReactNode> = {
   Home: <Home className="w-6 h-6" />,
   Heart: <Heart className="w-6 h-6" />,
   Briefcase: <Briefcase className="w-6 h-6" />,
+  Smile: <Smile className="w-6 h-6" />,
+  Star: <Star className="w-6 h-6" />,
 };
 
 export default function ProjectPage() {
@@ -136,7 +139,7 @@ export default function ProjectPage() {
                       <div className="p-6 bg-[#ECE8E1] border-l-4 border-[#8A7A63]">
                         <p className="text-[10px] tracking-widest uppercase font-bold text-[#8A7A63] mb-1">MahaRERA Registration No.</p>
                         <p className="text-lg font-serif">{project.rera}</p>
-                        <a href="https://maharera.mahaonline.gov.in" target="_blank" className="text-[9px] underline uppercase tracking-widest mt-2 block">Visit MahaRERA Website</a>
+                        <a href="https://maharera.mahaonline.gov.in" target="_blank" className="text-[9px] underline uppercase tracking-widest mt-2 block hover:text-[#8A7A63] transition-colors">Visit MahaRERA Website</a>
                       </div>
                     )}
                   </div>
@@ -195,11 +198,11 @@ export default function ProjectPage() {
                    </div>
                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                       {[
-                        { title: "Intelligent Design", desc: "Every square inch is planned with architectural intelligence." },
-                        { title: "Prime Locations", desc: "We select Pune's most iconic heritage areas." },
-                        { title: "Construction Quality", desc: "Dynamic building methods and premium materials." }
+                        { title: "Intelligent Design", desc: "Every square inch is planned with architectural intelligence and functional precision." },
+                        { title: "Prime Locations", desc: "Strategically located in Pune’s most desirable historical areas for high value." },
+                        { title: "Construction Quality", desc: "Dynamic building methods and premium materials ensure decade-long elegance." }
                       ].map((item, i) => (
-                        <div key={i} className="p-12 bg-white border border-[#D8D2C8] space-y-4 text-center">
+                        <div key={i} className="p-12 bg-white border border-[#D8D2C8] space-y-4 text-center group hover:bg-[#ECE8E1] transition-colors duration-500">
                            <h3 className="text-xl font-serif text-[#8A7A63]">{item.title}</h3>
                            <p className="text-sm font-light text-[#2B2B2B]/60 italic">{item.desc}</p>
                         </div>
@@ -216,7 +219,7 @@ export default function ProjectPage() {
                    <Accordion type="single" collapsible className="w-full">
                      {project.faqs.map((faq, idx) => (
                        <AccordionItem key={idx} value={`item-${idx}`} className="border-b border-[#D8D2C8] py-4">
-                         <AccordionTrigger className="text-left font-serif text-xl text-[#2B2B2B] hover:no-underline">
+                         <AccordionTrigger className="text-left font-serif text-xl text-[#2B2B2B] hover:no-underline hover:text-[#8A7A63] transition-colors">
                            {faq.question}
                          </AccordionTrigger>
                          <AccordionContent className="text-lg font-light text-[#2B2B2B]/60 italic pt-4">

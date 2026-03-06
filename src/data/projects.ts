@@ -111,22 +111,26 @@ export const projects: Project[] = [
     location: "Paud Road, Kothrud",
     image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1000",
     status: "completed",
-    description: "With an imposing exterior look, Serenity is truly an architectural marvel.",
-    fullDescription: "Serenity is a landmark completed project that defined luxury in Kothrud. Strategically located on Paud Road, it offers an imposing architectural presence and meticulously planned living spaces.",
-    highlights: ["Architectural marvel", "Strategic location", "Imposing exterior"],
+    description: "An architectural marvel on Paud Road.",
+    fullDescription: "With an imposing exterior look, ‘Serenity’ is truly an architectural marvel strategically located on Paud Road. It offers a right mix of gracious living apartments, smart offices and stunning showrooms. A great proposition if you wish to stay connected with the downtown, the ethnic charm, new futuristic opportunities and a happening locality.",
+    highlights: ["Architectural marvel", "Strategic location", "Mixed-use development"],
     rera: "P52100001810",
     amenities: [
       { icon: "Home", label: "Grand Entrance" },
       { icon: "ShieldCheck", label: "24/7 Security" },
-      { icon: "Trees", label: "Garden Spaces" }
+      { icon: "Trees", label: "Garden Spaces" },
+      { icon: "Car", label: "Ample Parking" }
     ],
     advantages: [
       "Prime Paud Road Location",
       "Excellent connectivity to Kothrud Hubs",
-      "Established community"
+      "Established community & infrastructure",
+      "Nearby schools and hospitals"
     ],
     faqs: [
-      { question: "Is Serenity completed?", answer: "Yes, this project is fully completed and occupied." }
+      { question: "Where is Serenity located?", answer: "Serenity is strategically located on Paud Road, Kothrud." },
+      { question: "Is the project RERA registered?", answer: "Yes, MahaRERA Registration No. P52100001810." },
+      { question: "What does Serenity offer?", answer: "It offers a mix of residential apartments, smart offices, and stunning showrooms." }
     ]
   },
   {
@@ -135,22 +139,25 @@ export const projects: Project[] = [
     location: "Near Mritunjay Mandir, Kothrud",
     image: "https://images.unsplash.com/photo-1567684014761-b618b6983527?q=80&w=1000",
     status: "completed",
-    description: "Located in the heart of a buzzing suburb on Karve Road.",
-    fullDescription: "Success Square sits at the heart of Kothrud's commercial and residential buzz. Located near the iconic Mritunjayeshwar Mandir, it offers unparalleled convenience and lifestyle access.",
-    highlights: ["Heart of buzzing suburb", "Karve Road access", "Iconic neighborhood"],
+    description: "The new landmark of today's Kothrud.",
+    fullDescription: "Located in the heart of a buzzing suburb, right beside Mritunjayeshwar Mandir on Karve Road, Success Square is the new landmark of today’s Kothrud. With premium residences and thoughtfully envisioned commercial spaces, it truly reflects the contemporary lifestyle and joyful verve you would like to adapt with your new address.",
+    highlights: ["Heart of buzzing suburb", "Karve Road access", "Contemporary lifestyle"],
     rera: "P52100001813",
     amenities: [
       { icon: "Car", label: "Ample Parking" },
       { icon: "ShieldCheck", label: "High Security" },
-      { icon: "Layout", label: "Smart Planning" }
+      { icon: "Layout", label: "Smart Planning" },
+      { icon: "Briefcase", label: "Commercial Spaces" }
     ],
     advantages: [
       "Adjacent to Mritunjay Mandir",
-      "Excellent road connectivity",
-      "Close to major shopping hubs"
+      "Excellent road connectivity on Karve Road",
+      "Close to major shopping & dining hubs",
+      "Prime residential neighborhood"
     ],
     faqs: [
-      { question: "What is the location of Success Square?", answer: "It is located near Mritunjay Mandir on Karve Road, Kothrud." }
+      { question: "Where is Success Square located?", answer: "It is located beside Mritunjayeshwar Mandir on Karve Road, Kothrud." },
+      { question: "What is the RERA number?", answer: "MahaRERA Registration No. P52100001813." }
     ]
   },
   {
@@ -159,22 +166,25 @@ export const projects: Project[] = [
     location: "Mayur Colony, Kothrud",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000",
     status: "completed",
-    description: "A luxury residential project at the prestigious address of Mayur Colony.",
-    fullDescription: "Shivalik redefined premium living in Mayur Colony. Known for its sophisticated design and elite neighborhood, it remains one of the most sought-after addresses in Kothrud.",
+    description: "Plush residences for the creme de la creme.",
+    fullDescription: "In close proximity with Bhagwan Shiva’s divine existence, ‘Shivalik’ is a luxury residential project at the prestigious address of Mayur Colony, Kothrud. These are plush residences for the creme de la creme. Living here would be an absolute status upgrade.",
     highlights: ["Prestigious address", "Luxury living", "Sophisticated design"],
     rera: "P52100014200",
     amenities: [
       { icon: "Dumbbell", label: "Fitness Area" },
       { icon: "Trees", label: "Landscape" },
-      { icon: "ShieldCheck", label: "Modern Security" }
+      { icon: "ShieldCheck", label: "Modern Security" },
+      { icon: "Home", label: "Status Address" }
     ],
     advantages: [
       "Elite Mayur Colony location",
       "Serene neighborhood",
-      "Proximity to quality education and healthcare"
+      "Proximity to quality education and healthcare",
+      "Elite social infrastructure"
     ],
     faqs: [
-      { question: "Is the project RERA registered?", answer: "Yes, the registration number is P52100014200." }
+      { question: "What makes Shivalik prestigious?", answer: "Its location in Mayur Colony and luxury design cater to the elite." },
+      { question: "Is the project RERA registered?", answer: "Yes, MahaRERA Registration No. P52100014200." }
     ]
   }
 ];
