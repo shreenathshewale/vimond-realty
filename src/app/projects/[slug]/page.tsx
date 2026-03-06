@@ -35,6 +35,7 @@ import {
 } from "@/components/ui/accordion";
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { InquiryPopup } from '@/components/ui/inquiry-popup';
 
 const iconMap: Record<string, React.ReactNode> = {
   Waves: <Waves className="w-6 h-6" />,
@@ -56,6 +57,7 @@ export default function ProjectPage() {
   const { slug } = useParams();
   const project = projects.find((p) => p.slug === slug);
   const [activeTab, setActiveTab] = React.useState('about');
+  const [isInquiryOpen, setIsInquiryOpen] = React.useState(false);
 
   if (!project) {
     return (
@@ -118,12 +120,17 @@ export default function ProjectPage() {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact">
-                <Button className="h-14 px-8 rounded-none bg-[#2B2B2B] text-[#F7F5F2] text-[10px] tracking-[0.4em] uppercase font-bold hover:bg-[#8A7A63] transition-all">
-                  Inquire Now
-                </Button>
-              </Link>
-              <Button variant="outline" className="h-14 px-8 rounded-none border-[#8A7A63] text-[#8A7A63] text-[10px] tracking-[0.4em] uppercase font-bold hover:bg-[#8A7A63] hover:text-white transition-all gap-2">
+              <Button 
+                onClick={() => setIsInquiryOpen(true)}
+                className="h-14 px-8 rounded-none bg-[#2B2B2B] text-[#F7F5F2] text-[10px] tracking-[0.4em] uppercase font-bold hover:bg-[#8A7A63] transition-all"
+              >
+                Inquire Now
+              </Button>
+              <Button 
+                onClick={() => setIsInquiryOpen(true)}
+                variant="outline" 
+                className="h-14 px-8 rounded-none border-[#8A7A63] text-[#8A7A63] text-[10px] tracking-[0.4em] uppercase font-bold hover:bg-[#8A7A63] hover:text-white transition-all gap-2"
+              >
                 <Download className="w-4 h-4" />
                 Download Brochure →
               </Button>
@@ -307,15 +314,21 @@ export default function ProjectPage() {
             Connect with our relationship managers for a private tour and more details about your future home.
           </p>
           <div className="pt-6">
-             <Link href="/contact">
-               <Button className="h-16 px-16 rounded-none bg-[#2B2B2B] text-[#F7F5F2] text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-[#8A7A63] transition-all">
-                  Book a Consultation
-                </Button>
-             </Link>
+            <Button 
+              onClick={() => setIsInquiryOpen(true)}
+              className="h-16 px-16 rounded-none bg-[#2B2B2B] text-[#F7F5F2] text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-[#8A7A63] transition-all"
+            >
+              Book a Consultation
+            </Button>
           </div>
         </motion.div>
       </div>
 
+      <InquiryPopup 
+        isOpen={isInquiryOpen} 
+        onClose={() => setIsInquiryOpen(false)} 
+        defaultProject={project.slug}
+      />
       <Footer />
     </main>
   );
