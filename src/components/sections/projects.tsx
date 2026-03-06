@@ -81,6 +81,14 @@ export function Projects() {
                       <h3 className="text-3xl md:text-5xl lg:text-7xl font-serif">{project.title}</h3>
                       <p className="text-[10px] tracking-[0.5em] uppercase text-primary font-bold">{project.location}</p>
                       <p className="text-lg font-light text-foreground/60 italic max-w-xl">{project.description}</p>
+                      
+                      <div className="pt-4">
+                        <Link href={`/projects/${project.slug}`}>
+                          <span className="mt-3 inline-block text-[10px] tracking-[0.5em] uppercase font-bold border-b border-primary/20 hover:border-primary pb-2 transition-all">
+                            EXPLORE DETAILS →
+                          </span>
+                        </Link>
+                      </div>
                     </div>
                     <div className="flex flex-col justify-between items-start lg:items-end">
                       <ul className="space-y-2 text-[10px] tracking-[0.2em] uppercase text-foreground/40 mb-8">
@@ -90,11 +98,6 @@ export function Projects() {
                           </li>
                         ))}
                       </ul>
-                      <Link href={`/projects/${project.slug}`}>
-                        <button className="text-[10px] tracking-[0.5em] uppercase text-foreground hover:text-primary transition-all font-bold border-b border-primary/20 pb-2 group-hover:translate-x-2">
-                          EXPLORE DETAILS →
-                        </button>
-                      </Link>
                     </div>
                   </div>
                 </motion.div>
@@ -142,11 +145,13 @@ export function Projects() {
                       <li key={i}>• {h}</li>
                     ))}
                   </ul>
-                  <Link href={`/projects/${project.slug}`}>
-                    <button className="inline-block text-[10px] tracking-[0.5em] uppercase text-foreground font-bold hover:text-primary transition-all border-b border-primary/20 pb-2 group-hover:translate-x-2">
-                      EXPLORE DETAILS →
-                    </button>
-                  </Link>
+                  <div className="pt-4">
+                    <Link href={`/projects/${project.slug}`}>
+                      <span className="mt-3 inline-block text-[10px] tracking-[0.5em] uppercase font-bold border-b border-primary/20 hover:border-primary pb-2 transition-all">
+                        EXPLORE DETAILS →
+                      </span>
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             );
