@@ -16,7 +16,7 @@ export const blogs: Blog[] = [
     slug: "igbc-gold-certified",
     title: "What is IGBC Gold Certified Building?",
     category: "Sustainability",
-    description: "IGBC Gold Certification is awarded to buildings that follow sustainable construction practices, energy efficiency and environmentally responsible design.",
+    description: "IGBC Gold certification represents environmentally responsible construction with sustainable materials, energy efficiency and eco-friendly design.",
     image: "https://images.unsplash.com/photo-1742845873557-9ba9cb0691ca?q=80&w=1000",
     content: [
       "IGBC Gold Certification is awarded to buildings that follow sustainable construction practices, energy efficiency and environmentally responsible design. It ensures reduced carbon footprint, efficient water usage and improved indoor environmental quality.",

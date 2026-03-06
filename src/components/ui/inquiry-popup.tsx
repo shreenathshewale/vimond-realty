@@ -18,7 +18,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { CheckCircle2, X } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 interface InquiryPopupProps {
   isOpen: boolean;
@@ -37,7 +37,7 @@ export function InquiryPopup({ isOpen, onClose, defaultProject }: InquiryPopupPr
   if (isSubmitted) {
     return (
       <Dialog open={isOpen} onOpenChange={onClose}>
-        <DialogContent className="sm:max-w-[425px] bg-[#F7F5F2] border-[#D8D2C8] rounded-none p-12 text-center shadow-2xl">
+        <DialogContent className="sm:max-w-[425px] bg-[#F7F5F2] border-[#D8D2C8] rounded-none p-12 text-center shadow-2xl z-[60]">
           <div className="flex flex-col items-center space-y-6">
             <CheckCircle2 className="w-16 h-16 text-[#8A7A63]" />
             <div className="space-y-2">
@@ -60,7 +60,7 @@ export function InquiryPopup({ isOpen, onClose, defaultProject }: InquiryPopupPr
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[500px] bg-[#F7F5F2] border-[#D8D2C8] rounded-none p-0 overflow-hidden shadow-2xl">
+      <DialogContent className="sm:max-w-[500px] bg-[#F7F5F2] border-[#D8D2C8] rounded-none p-0 overflow-hidden shadow-2xl z-[60]">
         <DialogHeader className="p-8 pb-0">
           <span className="text-[10px] tracking-[0.5em] uppercase text-[#8A7A63] font-bold block mb-2">Inquiry</span>
           <DialogTitle className="text-3xl font-serif text-[#2B2B2B] leading-none">Begin your journey.</DialogTitle>

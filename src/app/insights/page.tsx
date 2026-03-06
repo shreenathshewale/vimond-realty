@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { blogs } from '@/data/blogs';
+import { Button } from '@/components/ui/button';
 
 export default function InsightsPage() {
   return (
@@ -13,7 +14,7 @@ export default function InsightsPage() {
       <Navbar />
       
       <section className="pt-48 pb-32 px-6 md:px-10 lg:px-20">
-        <div className="max-w-7xl auto">
+        <div className="max-w-7xl mx-auto">
           {/* Header */}
           <motion.div 
             className="mb-24"
@@ -57,9 +58,13 @@ export default function InsightsPage() {
                   <p className="text-sm font-light text-[#2B2B2B]/50 leading-relaxed italic line-clamp-3">
                     {article.description}
                   </p>
-                  <Link href={`/insights/${article.slug}`} className="inline-block text-[10px] tracking-[0.4em] uppercase text-[#2B2B2B] font-bold border-b border-[#D8D2C8] pb-1 transition-all">
-                    Read More →
-                  </Link>
+                  <div className="pt-4">
+                    <Link href={`/insights/${article.slug}`}>
+                      <Button variant="link" className="p-0 h-auto text-[10px] tracking-[0.4em] uppercase text-[#2B2B2B] font-bold hover:text-[#8A7A63] transition-all">
+                        Read More →
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             ))}

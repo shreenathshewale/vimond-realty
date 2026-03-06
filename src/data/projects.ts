@@ -34,6 +34,29 @@ export interface Project {
   faqs: FAQ[];
 }
 
+const standardWhyUs = [
+  "Intelligent luxury architecture",
+  "Prime location advantage",
+  "Premium construction quality",
+  "Spacious layouts",
+  "Trusted developer"
+];
+
+const standardFAQs: FAQ[] = [
+  { 
+    question: "Is the project RERA registered?", 
+    answer: "Yes, all projects are registered under MahaRERA. Please refer to the specific project registration number provided in the details section." 
+  },
+  { 
+    question: "What configurations are available?", 
+    answer: "Projects offer premium 2 BHK, 3 BHK, and luxury residences designed with architectural intelligence." 
+  },
+  { 
+    question: "Where is the project located?", 
+    answer: "Located in prime residential areas of Pune, carefully selected for their lifestyle value and heritage." 
+  }
+];
+
 export const projects: Project[] = [
   {
     slug: "vivencia",
@@ -47,16 +70,9 @@ export const projects: Project[] = [
     rera: "P52100001234",
     configurations: [
       { type: "3 BHK Luxury", area: "1850 - 2100 Sq. Ft." },
-      { type: "4 BHK Premium", area: "2400 - 2800 Sq. Ft." },
-      { type: "Penthouse", area: "4500+ Sq. Ft." }
+      { type: "4 BHK Premium", area: "2400 - 2800 Sq. Ft." }
     ],
-    whyUs: [
-      "Intelligent luxury architecture",
-      "Prime location advantage",
-      "Premium construction quality",
-      "Spacious layouts",
-      "Trusted developer"
-    ],
+    whyUs: standardWhyUs,
     amenities: [
       { icon: "Waves", label: "Infinity Pool" },
       { icon: "Dumbbell", label: "Private Gym" },
@@ -72,9 +88,8 @@ export const projects: Project[] = [
       "Serene, Tree-lined Historical Neighborhood"
     ],
     faqs: [
-      { question: "Where is Vivencia located?", answer: "Vivencia is located in Lane 7, Koregaon Park, Pune." },
-      { question: "Is the project RERA registered?", answer: "Yes, all projects are registered under MahaRERA. Vivencia Registration No. P52100001234." },
-      { question: "What configurations are available?", answer: "Projects offer premium 3 BHK, 4 BHK and luxury residences." }
+      { question: "Where exactly in Koregaon Park is Vivencia?", answer: "Vivencia is situated in the elite Lane 7, known for its tranquil and prestigious atmosphere." },
+      ...standardFAQs
     ]
   },
   {
@@ -91,13 +106,7 @@ export const projects: Project[] = [
       { type: "3 BHK Classic", area: "1650 - 1900 Sq. Ft." },
       { type: "4 BHK Grand", area: "2200 - 2600 Sq. Ft." }
     ],
-    whyUs: [
-      "Intelligent luxury architecture",
-      "Prime location advantage",
-      "Premium construction quality",
-      "Spacious layouts",
-      "Trusted developer"
-    ],
+    whyUs: standardWhyUs,
     amenities: [
       { icon: "Trees", label: "Landscaped Courtyard" },
       { icon: "Dumbbell", label: "Fitness Suite" },
@@ -112,11 +121,7 @@ export const projects: Project[] = [
       "Serene and Prestigious Enclave",
       "Excellent Proximity to Deccan Gymkhana"
     ],
-    faqs: [
-      { question: "Where is Verïsta located?", answer: "Located in prime residential areas of Pune, situated on Law College Road." },
-      { question: "Is the project RERA registered?", answer: "Yes, all projects are registered under MahaRERA." },
-      { question: "What configurations are available?", answer: "Projects offer premium 3 BHK and 4 BHK luxury residences." }
-    ]
+    faqs: standardFAQs
   },
   {
     slug: "signature",
@@ -131,13 +136,7 @@ export const projects: Project[] = [
     configurations: [
       { type: "4 BHK Sky Home", area: "3200 Sq. Ft." }
     ],
-    whyUs: [
-      "Intelligent luxury architecture",
-      "Prime location advantage",
-      "Premium construction quality",
-      "Spacious layouts",
-      "Trusted developer"
-    ],
+    whyUs: standardWhyUs,
     amenities: [
       { icon: "Heart", label: "Wellness Center" },
       { icon: "Briefcase", label: "Business Lounge" },
@@ -152,10 +151,7 @@ export const projects: Project[] = [
       "Premier and Established Neighborhood",
       "Connected to Major Commercial Hubs"
     ],
-    faqs: [
-      { question: "Where is the project located?", answer: "Located in the tranquil Model Colony, Pune." },
-      { question: "Is the project RERA registered?", answer: "Yes, all projects are registered under MahaRERA." }
-    ]
+    faqs: standardFAQs
   },
   {
     slug: "serenity",
@@ -167,13 +163,7 @@ export const projects: Project[] = [
     about: "With an imposing exterior look, ‘Serenity’ is truly an architectural marvel strategically located on Paud Road. It offers a right mix of gracious living apartments, smart offices and stunning showrooms. A great proposition if you wish to stay connected with the downtown, the ethnic charm, new futuristic opportunities and a happening locality.",
     highlights: ["Architectural marvel", "Strategic location", "Mixed-use development"],
     rera: "P52100001810",
-    whyUs: [
-      "Intelligent luxury architecture",
-      "Prime location advantage",
-      "Premium construction quality",
-      "Spacious layouts",
-      "Trusted developer"
-    ],
+    whyUs: standardWhyUs,
     amenities: [
       { icon: "Home", label: "Grand Entrance" },
       { icon: "ShieldCheck", label: "24/7 Security" },
@@ -186,10 +176,7 @@ export const projects: Project[] = [
       "Established community & infrastructure",
       "Nearby schools and hospitals"
     ],
-    faqs: [
-      { question: "Where is Serenity located?", answer: "Serenity is strategically located on Paud Road, Kothrud." },
-      { question: "Is the project RERA registered?", answer: "Yes, all projects are registered under MahaRERA. Serenity Registration No. P52100001810." }
-    ]
+    faqs: standardFAQs
   },
   {
     slug: "success-square",
@@ -201,13 +188,7 @@ export const projects: Project[] = [
     about: "Located in the heart of a buzzing suburb, right beside Mritunjayeshwar Mandir on Karve Road, Success Square is the new landmark of today’s Kothrud. With premium residences and thoughtfully envisioned commercial spaces, it truly reflects the contemporary lifestyle and joyful verve you would like to adapt with your new address.",
     highlights: ["Heart of buzzing suburb", "Karve Road access", "Contemporary lifestyle"],
     rera: "P52100001813",
-    whyUs: [
-      "Intelligent luxury architecture",
-      "Prime location advantage",
-      "Premium construction quality",
-      "Spacious layouts",
-      "Trusted developer"
-    ],
+    whyUs: standardWhyUs,
     amenities: [
       { icon: "Car", label: "Ample Parking" },
       { icon: "ShieldCheck", label: "High Security" },
@@ -220,10 +201,7 @@ export const projects: Project[] = [
       "Close to major shopping & dining hubs",
       "Prime residential neighborhood"
     ],
-    faqs: [
-      { question: "Where is Success Square located?", answer: "It is located beside Mritunjayeshwar Mandir on Karve Road, Kothrud." },
-      { question: "Is the project RERA registered?", answer: "Yes, all projects are registered under MahaRERA. Success Square Registration No. P52100001813." }
-    ]
+    faqs: standardFAQs
   },
   {
     slug: "shivalik",
@@ -235,13 +213,7 @@ export const projects: Project[] = [
     about: "In close proximity with Bhagwan Shiva’s divine existence, ‘Shivalik’ is a luxury residential project at the prestigious address of Mayur Colony, Kothrud. These are plush residences for the creme de la creme. Living here would be an absolute status upgrade.",
     highlights: ["Prestigious address", "Luxury living", "Sophisticated design"],
     rera: "P52100014200",
-    whyUs: [
-      "Intelligent luxury architecture",
-      "Prime location advantage",
-      "Premium construction quality",
-      "Spacious layouts",
-      "Trusted developer"
-    ],
+    whyUs: standardWhyUs,
     amenities: [
       { icon: "Dumbbell", label: "Fitness Area" },
       { icon: "Trees", label: "Landscape" },
@@ -254,9 +226,6 @@ export const projects: Project[] = [
       "Proximity to quality education and healthcare",
       "Elite social infrastructure"
     ],
-    faqs: [
-      { question: "Is the project RERA registered?", answer: "Yes, all projects are registered under MahaRERA. Shivalik Registration No. P52100014200." },
-      { question: "Where is the project located?", answer: "Shivalik is located in the prestigious Mayur Colony, Kothrud." }
-    ]
+    faqs: standardFAQs
   }
 ];

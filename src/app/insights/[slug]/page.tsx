@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { blogs } from '@/data/blogs';
 import { ArrowLeft } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export default function BlogDetailPage() {
   const { slug } = useParams();
@@ -87,5 +88,3 @@ export default function BlogDetailPage() {
     </main>
   );
 }
-
-import { Button } from '@/components/ui/button';
