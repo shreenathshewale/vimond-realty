@@ -42,7 +42,7 @@ export function Projects() {
       <div className="asymmetric-container">
         <div className="mb-24 md:mb-40">
           <motion.h2 
-            className="text-5xl sm:text-6xl md:text-9xl font-serif text-foreground uppercase tracking-tighter mb-8"
+            className="text-5xl sm:text-6xl md:text-[100px] font-serif text-foreground uppercase tracking-tighter mb-8"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -58,13 +58,13 @@ export function Projects() {
               return (
                 <motion.div 
                   key={idx} 
-                  className="group relative"
+                  className="group relative transition-all duration-500"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                 >
                   <Link href={`/projects/${project.slug}`}>
-                    <div className="relative aspect-video overflow-hidden mb-8 md:mb-12 shadow-2xl">
+                    <div className="relative aspect-video overflow-hidden mb-8 md:mb-12 shadow-2xl transition-shadow duration-700 group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)]">
                       <Image
                         src={project.imagePath}
                         alt={project.title}
@@ -76,7 +76,7 @@ export function Projects() {
                   </Link>
                   <div className="absolute -top-3 -left-3 md:-top-6 md:-left-6 w-16 h-16 md:w-24 md:h-24 border-l border-t border-primary/20 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-700" />
                   
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 border-b border-primary/10 pb-8 md:pb-12">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 border-b border-primary/10 pb-8 md:pb-12 transition-transform duration-500 group-hover:-translate-y-1">
                     <div className="space-y-4">
                       <h3 className="text-3xl md:text-5xl lg:text-7xl font-serif">{project.title}</h3>
                       <p className="text-[10px] tracking-[0.5em] uppercase text-primary font-bold">{project.location}</p>
@@ -90,8 +90,10 @@ export function Projects() {
                           </li>
                         ))}
                       </ul>
-                      <Link href={`/projects/${project.slug}`} className="text-[10px] tracking-[0.5em] uppercase text-foreground hover:text-primary transition-all group-hover:translate-x-2 font-bold border-b border-primary/20 pb-2">
-                        Explore Details →
+                      <Link href={`/projects/${project.slug}`}>
+                        <button className="text-[10px] tracking-[0.5em] uppercase text-foreground hover:text-primary transition-all font-bold border-b border-primary/20 pb-2 group-hover:translate-x-2">
+                          EXPLORE DETAILS →
+                        </button>
                       </Link>
                     </div>
                   </div>
@@ -103,16 +105,16 @@ export function Projects() {
               <motion.div 
                 key={idx} 
                 className={cn(
-                  "flex flex-col lg:flex-row gap-12 lg:gap-24 items-center",
+                  "group flex flex-col lg:flex-row gap-12 lg:gap-24 items-center transition-all duration-500",
                   project.layout === 'split-right' && "lg:flex-row-reverse"
                 )}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <div className="w-full lg:w-3/5 relative group">
+                <div className="w-full lg:w-3/5 relative">
                   <Link href={`/projects/${project.slug}`}>
-                    <div className="relative aspect-square overflow-hidden shadow-xl">
+                    <div className="relative aspect-square overflow-hidden shadow-xl transition-shadow duration-700 group-hover:shadow-2xl">
                       <Image
                         src={project.imagePath}
                         alt={project.title}
@@ -122,12 +124,12 @@ export function Projects() {
                     </div>
                   </Link>
                   <div className={cn(
-                    "absolute -z-10 bg-background w-full h-full border border-primary/5 hidden sm:block",
-                    project.layout === 'split-left' ? "-top-6 -left-6 md:-top-12 md:-left-12" : "-bottom-6 -right-6 md:-bottom-12 md:-right-12"
+                    "absolute -z-10 bg-background w-full h-full border border-primary/5 hidden sm:block transition-transform duration-700",
+                    project.layout === 'split-left' ? "-top-6 -left-6 md:-top-12 md:-left-12 group-hover:-translate-x-2 group-hover:-translate-y-2" : "-bottom-6 -right-6 md:-bottom-12 md:-right-12 group-hover:translate-x-2 group-hover:translate-y-2"
                   )} />
                 </div>
                 
-                <div className="w-full lg:w-2/5 space-y-6 md:space-y-8">
+                <div className="w-full lg:w-2/5 space-y-6 md:space-y-8 transition-transform duration-500 group-hover:-translate-y-1">
                   <span className="text-[10px] tracking-[0.5em] uppercase text-primary font-bold">Featured Development</span>
                   <h3 className="text-3xl md:text-4xl lg:text-6xl font-serif leading-none">{project.title}</h3>
                   <p className="text-[10px] tracking-[0.5em] uppercase text-foreground/40">{project.location}</p>
@@ -140,8 +142,10 @@ export function Projects() {
                       <li key={i}>• {h}</li>
                     ))}
                   </ul>
-                  <Link href={`/projects/${project.slug}`} className="inline-block text-[10px] tracking-[0.5em] uppercase text-foreground font-bold hover:text-primary transition-all border-b border-primary/20 pb-2">
-                    View Portfolio →
+                  <Link href={`/projects/${project.slug}`}>
+                    <button className="inline-block text-[10px] tracking-[0.5em] uppercase text-foreground font-bold hover:text-primary transition-all border-b border-primary/20 pb-2 group-hover:translate-x-2">
+                      EXPLORE DETAILS →
+                    </button>
                   </Link>
                 </div>
               </motion.div>
