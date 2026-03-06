@@ -74,6 +74,17 @@ export function Navbar() {
           >
             Intelligent Luxury
           </Link>
+
+          <Link 
+            href="/insights" 
+            className={cn(
+              "text-[10px] tracking-[0.3em] uppercase transition-colors hover:text-[#8A7A63]", 
+              pathname === '/insights' ? "text-[#8A7A63]" : "text-white"
+            )}
+          >
+            Insights
+          </Link>
+
           <Link 
             href="/contact" 
             className={cn(
