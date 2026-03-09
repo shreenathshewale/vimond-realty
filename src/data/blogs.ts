@@ -75,7 +75,7 @@ export const blogs: Blog[] = [
     title: "Benefits of Living in Koregaon Park",
     category: "Lifestyle",
     description: "Koregaon Park is one of Pune's most premium residential areas known for its greenery, elite lifestyle and excellent connectivity.",
-    image: "https://images.unsplash.com/photo-1573845105959-48591b7fd566?q=80&w=1000",
+    image: "https://24kliving.com/images/media/174262620024k%20Living%20Blog%201%20NRI.jpeg",
     content: [
       "Koregaon Park is Pune's most enduring symbol of elegance. Known for its dense tree-lined avenues (Lanes 1-7), it offers a micro-climate that is significantly cooler and fresher than the rest of the city. Living here means being at the 'cultural heart' of the city.",
       "From the serenity of the Osho International Resort to the high-end social hubs of Lane 7, Koregaon Park offers a unique blend of peace and energy. ViMond's projects in this area are designed to honor this legacy, providing a modern sanctuary within this iconic historical district.",
@@ -121,7 +121,7 @@ export const blogs: Blog[] = [
     highlights: [
       "AI-driven climate and energy management",
       "Frictionless biometric security systems",
-      "Circadian lighting for enhanced well-being",
+      "Circadian lighting for enhanced well-well-being",
       "Upgradeable IoT infrastructure for long-term value"
     ],
     stats: [
