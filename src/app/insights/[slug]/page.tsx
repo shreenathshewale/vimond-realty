@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { useParams } from 'next/navigation';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
@@ -7,8 +8,14 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { blogs } from '@/data/blogs';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function BlogDetailPage() {
   const { slug } = useParams();
@@ -60,26 +67,73 @@ export default function BlogDetailPage() {
             />
           </motion.div>
 
-          {/* Content */}
-          <motion.div 
-            className="space-y-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-          >
-            {blog.content.map((paragraph, idx) => (
-              <p key={idx} className="text-lg md:text-xl font-light text-[#2B2B2B]/80 leading-relaxed italic">
-                {paragraph}
-              </p>
-            ))}
-          </motion.div>
+          {/* Impact Statistics */}
+          {blog.stats && (
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-24">
+              {blog.stats.map((stat, idx) => (
+                <motion.div 
+                  key={idx}
+                  className="p-8 bg-white border border-[#D8D2C8] text-center space-y-2 shadow-sm"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                >
+                  <p className="text-3xl md:text-5xl font-serif text-[#8A7A63]">{stat.value}</p>
+                  <p className="text-[10px] tracking-[0.3em] uppercase text-[#2B2B2B]/40 font-bold">{stat.label}</p>
+                </motion.div>
+              ))}
+            </div>
+          )}
 
-          <div className="mt-24 pt-12 border-t border-[#D8D2C8]">
+          {/* Main Content */}
+          <div className="space-y-12">
+            <motion.div 
+              className="space-y-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              {blog.content.map((paragraph, idx) => (
+                <p key={idx} className="text-lg md:text-xl font-light text-[#2B2B2B]/80 leading-relaxed italic">
+                  {paragraph}
+                </p>
+              ))}
+            </motion.div>
+
+            {/* Technical Pillars (Accordion) */}
+            {blog.pillars && (
+              <div className="pt-16">
+                <div className="mb-12">
+                  <span className="text-[10px] tracking-[0.4em] uppercase text-[#8A7A63] font-bold block mb-4">The Foundation</span>
+                  <h2 className="text-3xl md:text-5xl font-serif text-[#2B2B2B]">Core Pillars</h2>
+                </div>
+                <Accordion type="single" collapsible className="w-full">
+                  {blog.pillars.map((pillar, idx) => (
+                    <AccordionItem key={idx} value={`pillar-${idx}`} className="border-b border-[#D8D2C8] py-4">
+                      <AccordionTrigger className="text-left font-serif text-xl md:text-2xl text-[#2B2B2B] hover:no-underline hover:text-[#8A7A63] transition-colors">
+                        {pillar.title}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-lg font-light text-[#2B2B2B]/60 italic pt-6 leading-relaxed max-w-3xl">
+                        {pillar.description}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+            )}
+          </div>
+
+          <div className="mt-24 pt-12 border-t border-[#D8D2C8] flex justify-between items-center">
             <Link href="/insights">
               <Button variant="outline" className="rounded-none border-[#8A7A63] text-[#8A7A63] text-[10px] tracking-[0.4em] uppercase font-bold hover:bg-[#8A7A63] hover:text-white transition-all">
                 Back to Insights
               </Button>
             </Link>
+            <div className="flex items-center gap-4">
+              <span className="text-[9px] tracking-[0.2em] uppercase text-[#2B2B2B]/40">Share This Article</span>
+              <div className="w-12 h-[1px] bg-[#D8D2C8]" />
+            </div>
           </div>
         </div>
       </article>
