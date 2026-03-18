@@ -3,8 +3,11 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Hero() {
+  const heroImg = PlaceHolderImages.find(img => img.id === 'hero-main');
+
   return (
     <section className="relative pt-24 min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-background">
       <div className="asymmetric-container w-full z-10 text-center mb-16 px-6 md:px-10 lg:px-20">
@@ -30,13 +33,16 @@ export function Hero() {
         transition={{ duration: 1.5, ease: "easeOut" }}
       >
         <div className="relative w-full h-full overflow-hidden shadow-2xl">
-          <Image
-            src="/images/Hero.png"
-            alt="ViMond Realty Luxury Living"
-            fill
-            className="w-full h-full object-cover"
-            priority
-          />
+          {heroImg && (
+            <Image
+              src={heroImg.imageUrl}
+              alt={heroImg.description}
+              fill
+              className="w-full h-full object-cover"
+              priority
+              data-ai-hint={heroImg.imageHint}
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-[#2F2F2F]/40 to-transparent" />
         </div>
         {/* Architectural Offset Frame */}

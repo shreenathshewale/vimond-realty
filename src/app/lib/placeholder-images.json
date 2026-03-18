@@ -1,6 +1,12 @@
 {
   "placeholderImages": [
     {
+      "id": "hero-main",
+      "description": "ViMond Realty main hero brand image",
+      "imageUrl": "/images/Hero.png",
+      "imageHint": "luxury architecture"
+    },
+    {
       "id": "hero-video-alt",
       "description": "Luxury real estate development exterior",
       "imageUrl": "https://images.unsplash.com/photo-1735282044858-287a840901e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bHV4dXJ5JTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc3MjQ1MzM3MHww&ixlib=rb-4.1.0&q=80&w=1080",
@@ -9,19 +15,19 @@
     {
       "id": "vivencia-project",
       "description": "Vivencia project in Koregaon Park",
-      "imageUrl": "https://images.unsplash.com/photo-1662454419736-de132ff75638?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBhcGFydG1lbnR8ZW58MHx8fHwxNzcyMzg0MDM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/Vivenica.png",
       "imageHint": "modern apartment"
     },
     {
       "id": "signature-tower",
       "description": "Signature Tower II project",
-      "imageUrl": "https://images.unsplash.com/photo-1760799253851-1960e4f6ba50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyZXNpZGVudGlhbCUyMHRvd2VyfGVufDB8fHx8MTc3MjQ1MzM3MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/Signature.png",
       "imageHint": "residential tower"
     },
     {
       "id": "verista-project",
       "description": "Verïsta project Law College Road",
-      "imageUrl": "https://images.unsplash.com/photo-1650611673307-5058c43fcd63?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb250ZW1wb3JhcnklMjBob21lfGVufDB8fHx8MTc3MjQ1MzM3MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/Verista.png",
       "imageHint": "contemporary home"
     },
     {
@@ -51,7 +57,7 @@
     {
       "id": "blog-2",
       "description": "Prime location concept",
-      "imageUrl": "https://images.unsplash.com/photo-1573845105959-48591b7fd566?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxuZWlnaGJvcmhvb2QlMjBzdHJlZXR8ZW58MHx8fHwxNzcyNDUzMzcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://24kliving.com/images/media/174262620024k%20Living%20Blog%201%20NRI.jpeg",
       "imageHint": "neighborhood street"
     },
     {
