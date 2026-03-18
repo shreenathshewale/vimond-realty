@@ -32,18 +32,18 @@ export function Hero() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
       >
-        <div className="relative w-full h-full overflow-hidden shadow-2xl">
+        <div className="relative w-full h-full overflow-hidden shadow-2xl bg-black flex items-center justify-center">
           {heroImg && (
             <Image
               src={heroImg.imageUrl}
               alt={heroImg.description}
               fill
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               priority
               data-ai-hint={heroImg.imageHint}
             />
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#2F2F2F]/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
         </div>
         {/* Architectural Offset Frame */}
         <div className="absolute -bottom-4 -right-2 md:-bottom-8 md:right-16 w-24 h-24 md:w-32 md:h-32 border-r border-b border-primary/20 -z-10" />
