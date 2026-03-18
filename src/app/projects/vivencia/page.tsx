@@ -170,7 +170,7 @@ export default function VivenciaPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                <div className="relative aspect-[4/5] overflow-hidden group">
-                  <Image src="/images/hero.jpg" alt="Interior View" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+                  <Image src="/images/Hero.png" alt="Interior View" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-black/5" />
                </div>
                <div className="relative aspect-[4/5] overflow-hidden group lg:mt-12">

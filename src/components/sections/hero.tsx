@@ -31,7 +31,7 @@ export function Hero() {
       >
         <div className="relative w-full h-full overflow-hidden shadow-2xl">
           <Image
-            src="/images/hero.jpg"
+            src="/images/Hero.png"
             alt="ViMond Realty Luxury Living"
             fill
             className="w-full h-full object-cover"
