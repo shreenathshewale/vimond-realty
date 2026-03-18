@@ -18,6 +18,11 @@ import { InquiryPopup } from '@/components/ui/inquiry-popup';
 export function Navbar() {
   const pathname = usePathname();
   const [isInquiryOpen, setIsInquiryOpen] = React.useState(false);
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <>
@@ -54,19 +59,25 @@ export function Navbar() {
               About
             </Link>
             
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-[10px] tracking-[0.3em] uppercase outline-none text-white hover:text-[#8A7A63] transition-colors">
+            {mounted ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center gap-1 text-[10px] tracking-[0.3em] uppercase outline-none text-white hover:text-[#8A7A63] transition-colors">
+                  Projects <ChevronDown className="w-2 h-2 opacity-50" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-[#1F1F1F] border border-white/10 rounded-none p-1 min-w-[200px] shadow-2xl">
+                  <DropdownMenuItem className="focus:bg-white/5 focus:text-[#8A7A63] rounded-none py-4 cursor-pointer">
+                    <Link href="/projects/ongoing" className="text-[9px] tracking-[0.2em] uppercase w-full text-white/80">Ongoing</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="focus:bg-white/5 focus:text-[#8A7A63] rounded-none py-4 cursor-pointer">
+                    <Link href="/projects/completed" className="text-[9px] tracking-[0.2em] uppercase w-full text-white/80">Completed</Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <div className="flex items-center gap-1 text-[10px] tracking-[0.3em] uppercase text-white cursor-default">
                 Projects <ChevronDown className="w-2 h-2 opacity-50" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-[#1F1F1F] border border-white/10 rounded-none p-1 min-w-[200px] shadow-2xl">
-                <DropdownMenuItem className="focus:bg-white/5 focus:text-[#8A7A63] rounded-none py-4 cursor-pointer">
-                  <Link href="/projects/ongoing" className="text-[9px] tracking-[0.2em] uppercase w-full text-white/80">Ongoing</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem className="focus:bg-white/5 focus:text-[#8A7A63] rounded-none py-4 cursor-pointer">
-                  <Link href="/projects/completed" className="text-[9px] tracking-[0.2em] uppercase w-full text-white/80">Completed</Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+              </div>
+            )}
 
             <Link 
               href="/luxury" 
