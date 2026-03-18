@@ -1,9 +1,10 @@
+
 {
   "placeholderImages": [
     {
       "id": "hero-main",
       "description": "ViMond Realty main hero brand image",
-      "imageUrl": "/images/me.png",
+      "imageUrl": "/images/he.png",
       "imageHint": "luxury architecture"
     },
     {
