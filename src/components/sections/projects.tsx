@@ -40,7 +40,7 @@ export function Projects() {
                   viewport={{ once: true }}
                 >
                   <Link href={`/projects/${project.slug}`}>
-                    <div className="relative aspect-[4/3] sm:aspect-video overflow-hidden mb-8 md:mb-12 shadow-2xl group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all duration-700">
+                    <div className="relative aspect-[16/9] overflow-hidden mb-8 md:mb-12 shadow-2xl group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all duration-700 bg-black">
                       <Image
                         src={project.image}
                         alt={project.name}
@@ -92,7 +92,7 @@ export function Projects() {
               >
                 <div className="w-full lg:w-3/5 relative">
                   <Link href={`/projects/${project.slug}`}>
-                    <div className="relative aspect-square sm:aspect-video lg:aspect-square overflow-hidden shadow-xl group-hover:shadow-2xl transition-all duration-700">
+                    <div className="relative aspect-[16/10] overflow-hidden shadow-xl group-hover:shadow-2xl transition-all duration-700 bg-black">
                       <Image
                         src={project.image}
                         alt={project.name}
@@ -149,7 +149,7 @@ export function Projects() {
                 viewport={{ once: true }}
               >
                 <Link href={`/projects/${project.slug}`}>
-                  <div className="relative aspect-[4/5] overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-700">
+                  <div className="relative aspect-[4/5] overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-700 bg-black">
                     <Image
                       src={project.image}
                       alt={project.name}

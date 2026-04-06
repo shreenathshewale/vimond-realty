@@ -37,7 +37,7 @@ export default function CompletedProjectsPage() {
                   viewport={{ once: true }}
                 >
                   <Link href={`/projects/${project.slug}`}>
-                    <div className="relative aspect-video overflow-hidden shadow-2xl">
+                    <div className="relative aspect-[16/9] overflow-hidden shadow-2xl bg-black">
                       <Image 
                         src={project.image} 
                         alt={project.name} 

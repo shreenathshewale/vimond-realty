@@ -40,7 +40,7 @@ export default function OngoingProjectsPage() {
                 >
                   <div className="w-full lg:w-3/5 relative group">
                     <Link href={`/projects/${project.slug}`}>
-                      <div className="relative aspect-[4/5] overflow-hidden shadow-2xl">
+                      <div className="relative aspect-[4/5] overflow-hidden shadow-2xl bg-black">
                         <Image 
                           src={project.image} 
                           alt={project.name} 
