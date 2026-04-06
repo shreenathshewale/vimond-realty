@@ -9,17 +9,17 @@ export function Hero() {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-main');
 
   return (
-    <section className="relative pt-24 min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-background">
-      <div className="asymmetric-container w-full z-10 text-center mb-16 px-6 md:px-10 lg:px-20">
+    <section className="relative pt-32 md:pt-40 min-h-[90vh] md:min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-background">
+      <div className="asymmetric-container w-full z-10 text-center mb-12 md:mb-16 px-6 md:px-10 lg:px-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h1 className="text-4xl sm:text-6xl md:text-[100px] font-serif font-light leading-[1.1] md:leading-[0.9] tracking-tighter mb-8 text-foreground uppercase">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-[100px] font-serif font-light leading-[1.2] md:leading-[0.9] tracking-tighter mb-6 md:mb-8 text-foreground uppercase">
             Intelligent <br className="hidden sm:block" /> Luxury Living<span className="text-primary italic">.</span>
           </h1>
-          <div className="w-16 md:w-24 h-[1px] bg-primary/30 mx-auto my-8 md:my-12" />
+          <div className="w-12 md:w-24 h-[1px] bg-primary/30 mx-auto my-6 md:my-12" />
           <p className="max-w-xl mx-auto text-sm md:text-lg font-light text-foreground/60 leading-relaxed italic px-4">
             "ViMond Realty stands as a beacon of architectural mastery, carefully selecting Pune's most prestigious locations."
           </p>
@@ -27,7 +27,7 @@ export function Hero() {
       </div>
       
       <motion.div 
-        className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] px-4 sm:px-8 md:px-24"
+        className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] px-4 sm:px-8 md:px-24"
         initial={{ opacity: 0, scale: 1.05 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
@@ -46,7 +46,7 @@ export function Hero() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
         </div>
         {/* Architectural Offset Frame */}
-        <div className="absolute -bottom-4 -right-2 md:-bottom-8 md:right-16 w-24 h-24 md:w-32 md:h-32 border-r border-b border-primary/20 -z-10" />
+        <div className="absolute -bottom-4 -right-2 md:-bottom-8 md:right-16 w-16 h-16 md:w-32 md:h-32 border-r border-b border-primary/20 -z-10 hidden sm:block" />
       </motion.div>
     </section>
   );

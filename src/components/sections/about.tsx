@@ -17,7 +17,7 @@ export function About() {
             transition={{ duration: 1 }}
           >
             {/* Architectural Layered Background */}
-            <div className="absolute -top-6 -left-6 md:-top-12 md:-left-12 w-full h-full bg-secondary/30 -z-10" />
+            <div className="absolute -top-4 -left-4 md:-top-12 md:-left-12 w-full h-full bg-secondary/30 -z-10" />
             
             <div className="relative aspect-[3/4] overflow-hidden group">
               <Image 
@@ -31,7 +31,7 @@ export function About() {
             </div>
             
             {/* Floating Detail Frame */}
-            <div className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 w-32 h-32 md:w-48 md:h-48 border border-primary/10 backdrop-blur-sm p-4 hidden sm:block">
+            <div className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 w-28 h-28 md:w-48 md:h-48 border border-primary/10 backdrop-blur-sm p-4 hidden sm:block">
                <span className="text-[10px] tracking-[0.4em] uppercase text-primary font-bold">Concept No. 01</span>
                <p className="text-[10px] text-foreground/40 mt-2 uppercase tracking-widest leading-relaxed">
                  Merging legacy with future-proof engineering.
@@ -40,17 +40,17 @@ export function About() {
           </motion.div>
 
           <motion.div 
-            className="order-1 lg:order-2 space-y-8 lg:space-y-12"
+            className="order-1 lg:order-2 space-y-6 md:space-y-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div>
-              <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif text-foreground uppercase tracking-tighter mb-6">
-                Who <br /> We Are<span className="text-primary italic">.</span>
+              <h2 className="text-3xl sm:text-5xl md:text-7xl font-serif text-foreground uppercase tracking-tighter mb-4 md:mb-6 leading-tight">
+                Who <br className="hidden sm:block" /> We Are<span className="text-primary italic">.</span>
               </h2>
-              <div className="w-24 h-[1px] bg-primary/30 mb-8" />
+              <div className="w-16 md:w-24 h-[1px] bg-primary/30 mb-6 md:mb-8" />
               <p className="text-lg sm:text-xl md:text-2xl font-light text-foreground/80 leading-relaxed italic">
                 ViMond Realty is an architectural powerhouse dedicated to redefining the Pune skyline.
               </p>
@@ -69,7 +69,7 @@ export function About() {
                 <div key={item.id} className="flex gap-4 md:gap-6 items-start border-l border-primary/20 pl-4 md:pl-6 group">
                   <span className="text-[10px] tracking-[0.4em] uppercase text-primary font-bold group-hover:translate-x-1 transition-transform">{item.id}</span>
                   <div>
-                    <h3 className="text-base md:text-lg font-serif uppercase tracking-widest">{item.title}</h3>
+                    <h3 className="text-sm md:text-lg font-serif uppercase tracking-widest">{item.title}</h3>
                     <p className="text-[10px] font-light text-foreground/40 uppercase tracking-widest mt-1">{item.desc}</p>
                   </div>
                 </div>
