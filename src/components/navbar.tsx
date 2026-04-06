@@ -116,80 +116,88 @@ export function Navbar() {
             </Button>
 
             {/* Mobile Menu Trigger */}
-            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" className="md:hidden p-2 text-white hover:bg-white/5">
-                  <Menu className="w-6 h-6" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="bg-[#1F1F1F] border-white/10 p-0 text-white w-[80%] max-w-[400px]">
-                <div className="flex flex-col h-full pt-20 px-8 pb-12">
-                  <div className="space-y-8">
-                    {navLinks.slice(0, 2).map((link) => (
-                      <Link 
-                        key={link.href}
-                        href={link.href} 
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className={cn(
-                          "block text-lg tracking-[0.2em] uppercase font-light",
-                          pathname === link.href ? "text-[#8A7A63]" : "text-white/70"
-                        )}
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
-
-                    <div className="space-y-4">
-                      <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 font-bold">Projects</p>
-                      {projectLinks.map((link) => (
+            {mounted ? (
+              <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" className="md:hidden p-2 text-white hover:bg-white/5">
+                    <Menu className="w-6 h-6" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="bg-[#1F1F1F] border-white/10 p-0 text-white w-[80%] max-w-[400px]">
+                  <div className="flex flex-col h-full pt-20 px-8 pb-12">
+                    <div className="space-y-8">
+                      {navLinks.slice(0, 2).map((link) => (
                         <Link 
                           key={link.href}
                           href={link.href} 
                           onClick={() => setIsMobileMenuOpen(false)}
-                          className="block text-lg tracking-[0.2em] uppercase font-light pl-4"
+                          className={cn(
+                            "block text-lg tracking-[0.2em] uppercase font-light",
+                            pathname === link.href ? "text-[#8A7A63]" : "text-white/70"
+                          )}
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+
+                      <div className="space-y-4">
+                        <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 font-bold">Projects</p>
+                        {projectLinks.map((link) => (
+                          <Link 
+                            key={link.href}
+                            href={link.href} 
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="block text-lg tracking-[0.2em] uppercase font-light pl-4"
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
+                      </div>
+
+                      {navLinks.slice(2).map((link) => (
+                        <Link 
+                          key={link.href}
+                          href={link.href} 
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className={cn(
+                            "block text-lg tracking-[0.2em] uppercase font-light",
+                            pathname === link.href ? "text-[#8A7A63]" : "text-white/70"
+                          )}
                         >
                           {link.label}
                         </Link>
                       ))}
                     </div>
 
-                    {navLinks.slice(2).map((link) => (
-                      <Link 
-                        key={link.href}
-                        href={link.href} 
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className={cn(
-                          "block text-lg tracking-[0.2em] uppercase font-light",
-                          pathname === link.href ? "text-[#8A7A63]" : "text-white/70"
-                        )}
+                    <div className="mt-auto pt-12">
+                      <Button 
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          setIsInquiryOpen(true);
+                        }}
+                        className="w-full h-14 rounded-none bg-[#8A7A63] text-white text-[10px] tracking-[0.4em] uppercase font-bold"
                       >
-                        {link.label}
-                      </Link>
-                    ))}
+                        Inquire Now
+                      </Button>
+                    </div>
                   </div>
-
-                  <div className="mt-auto pt-12">
-                    <Button 
-                      onClick={() => {
-                        setIsMobileMenuOpen(false);
-                        setIsInquiryOpen(true);
-                      }}
-                      className="w-full h-14 rounded-none bg-[#8A7A63] text-white text-[10px] tracking-[0.4em] uppercase font-bold"
-                    >
-                      Inquire Now
-                    </Button>
-                  </div>
-                </div>
-              </SheetContent>
-            </Sheet>
+                </SheetContent>
+              </Sheet>
+            ) : (
+              <Button variant="ghost" className="md:hidden p-2 text-white hover:bg-white/5">
+                <Menu className="w-6 h-6" />
+              </Button>
+            )}
           </div>
         </div>
       </nav>
 
-      <InquiryPopup 
-        isOpen={isInquiryOpen} 
-        onClose={() => setIsInquiryOpen(false)} 
-      />
+      {mounted && (
+        <InquiryPopup 
+          isOpen={isInquiryOpen} 
+          onClose={() => setIsInquiryOpen(false)} 
+        />
+      )}
     </>
   );
 }
