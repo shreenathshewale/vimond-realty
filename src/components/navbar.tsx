@@ -16,7 +16,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from '@/components/ui/sheet';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { ChevronDown, Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { InquiryPopup } from '@/components/ui/inquiry-popup';
 

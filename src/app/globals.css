@@ -62,3 +62,11 @@
 .bronze-text {
   color: #8A7A63;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
