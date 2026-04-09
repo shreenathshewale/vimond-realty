@@ -4,51 +4,80 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { motion } from 'framer-motion';
 
 export function Contact() {
   return (
-    <section id="contact" className="section-padding stone-bg">
-      <div className="asymmetric-container">
-        <div className="flex flex-col md:flex-row gap-24 md:gap-40">
-          <div className="md:w-1/3 space-y-24">
-            <h2 className="text-5xl md:text-7xl font-serif text-foreground uppercase tracking-tighter">
-              The <br /><span className="italic text-primary">Inquiry.</span>
-            </h2>
+    <section id="contact" className="section-spacing bg-[#ECE8E1]">
+      <div className="container-max">
+        <div className="flex flex-col lg:flex-row gap-20 lg:gap-32">
+          <motion.div 
+            className="lg:w-1/3 space-y-16"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="space-y-4">
+              <span className="text-[10px] tracking-[0.5em] uppercase text-primary font-bold">Connect</span>
+              <h2 className="text-4xl md:text-6xl font-serif text-foreground uppercase tracking-tighter leading-none">
+                Begin Your<br /><span className="italic text-primary">Journey.</span>
+              </h2>
+            </div>
             
             <div className="space-y-12">
-              <div className="space-y-2">
-                <p className="text-[10px] tracking-[0.4em] uppercase text-primary font-bold">Call Us</p>
-                <p className="text-lg font-serif">+91 (0) 20 2567 0000</p>
+              <div className="space-y-2 group">
+                <p className="text-[9px] tracking-[0.4em] uppercase text-primary font-bold opacity-60">Call Us</p>
+                <p className="text-xl font-serif group-hover:text-primary transition-colors">+91 20 2567 0000</p>
+              </div>
+              <div className="space-y-2 group">
+                <p className="text-[9px] tracking-[0.4em] uppercase text-primary font-bold opacity-60">Write Us</p>
+                <p className="text-xl font-serif group-hover:text-primary transition-colors">inquiry@vmondrealty.com</p>
               </div>
               <div className="space-y-2">
-                <p className="text-[10px] tracking-[0.4em] uppercase text-primary font-bold">Write Us</p>
-                <p className="text-lg font-serif">inquiry@vmondrealty.com</p>
-              </div>
-              <div className="space-y-2">
-                <p className="text-[10px] tracking-[0.4em] uppercase text-primary font-bold">Visit Us</p>
-                <p className="text-sm font-light text-foreground/60 leading-relaxed">
+                <p className="text-[9px] tracking-[0.4em] uppercase text-primary font-bold opacity-60">Visit Us</p>
+                <p className="text-sm font-light text-foreground/60 leading-relaxed uppercase tracking-widest mt-2">
                   ViMond Landmark, Lane No. 7, <br />
                   Koregaon Park, Pune 411001
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="md:w-2/3">
-            <form className="space-y-16">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
-                <Input placeholder="YOUR NAME" className="luxury-underline-input border-foreground/10" />
-                <Input placeholder="EMAIL ADDRESS" className="luxury-underline-input border-foreground/10" />
-                <Input placeholder="PHONE NUMBER" className="luxury-underline-input border-foreground/10" />
-                <Input placeholder="SUBJECT" className="luxury-underline-input border-foreground/10" />
+          <motion.div 
+            className="lg:w-2/3 bg-white p-10 md:p-16 rounded-2xl shadow-xl"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <form className="space-y-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                <div className="space-y-2">
+                   <label className="text-[10px] tracking-[0.3em] uppercase text-foreground/40 font-bold">Full Name</label>
+                   <Input placeholder="E.G. ALEXANDER MUNDE" className="luxury-underline-input border-black/5 h-12" />
+                </div>
+                <div className="space-y-2">
+                   <label className="text-[10px] tracking-[0.3em] uppercase text-foreground/40 font-bold">Email Address</label>
+                   <Input placeholder="E.G. HELLO@EMAIL.COM" className="luxury-underline-input border-black/5 h-12" />
+                </div>
+                <div className="space-y-2">
+                   <label className="text-[10px] tracking-[0.3em] uppercase text-foreground/40 font-bold">Phone Number</label>
+                   <Input placeholder="+91 XXX XXX XXXX" className="luxury-underline-input border-black/5 h-12" />
+                </div>
+                <div className="space-y-2">
+                   <label className="text-[10px] tracking-[0.3em] uppercase text-foreground/40 font-bold">Subject</label>
+                   <Input placeholder="E.G. PROJECT INQUIRY" className="luxury-underline-input border-black/5 h-12" />
+                </div>
               </div>
-              <Textarea placeholder="MESSAGE" className="luxury-underline-input min-h-[120px] border-foreground/10" />
+              <div className="space-y-2">
+                 <label className="text-[10px] tracking-[0.3em] uppercase text-foreground/40 font-bold">Message</label>
+                 <Textarea placeholder="HOW CAN WE ASSIST YOU?" className="luxury-underline-input min-h-[140px] border-black/5" />
+              </div>
               
-              <Button className="h-16 px-16 rounded-none bg-primary text-white text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-[#766854] transition-all">
+              <Button className="btn-luxury bg-primary text-white w-full md:w-auto">
                 Send Message
               </Button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

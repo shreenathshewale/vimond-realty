@@ -6,9 +6,9 @@ import { motion } from 'framer-motion';
 
 export function About() {
   return (
-    <section id="about" className="section-padding bg-background overflow-hidden px-6 md:px-10 lg:px-20">
-      <div className="asymmetric-container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+    <section id="about" className="section-spacing bg-background overflow-hidden">
+      <div className="container-max">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
           <motion.div 
             className="order-2 lg:order-1 relative"
             initial={{ opacity: 0, x: -50 }}
@@ -16,61 +16,58 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            {/* Architectural Layered Background */}
-            <div className="absolute -top-4 -left-4 md:-top-12 md:-left-12 w-full h-full bg-secondary/30 -z-10" />
-            
-            <div className="relative aspect-[3/4] overflow-hidden group">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-2xl group">
               <Image 
                 src="/images/we.png" 
                 alt="Who We Are - Vimond Realty" 
                 width={900}
-                height={600}
-                className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105"
+                height={1200}
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500" />
             </div>
             
-            {/* Floating Detail Frame */}
-            <div className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 w-28 h-28 md:w-48 md:h-48 border border-primary/10 backdrop-blur-sm p-4 hidden sm:block">
-               <span className="text-[10px] tracking-[0.4em] uppercase text-primary font-bold">Concept No. 01</span>
-               <p className="text-[10px] text-foreground/40 mt-2 uppercase tracking-widest leading-relaxed">
+            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white shadow-xl rounded-2xl p-6 hidden md:flex flex-col justify-center border border-black/5">
+               <span className="text-[10px] tracking-[0.4em] uppercase text-primary font-bold">Concept 01</span>
+               <p className="text-[11px] text-foreground/50 mt-3 uppercase tracking-widest leading-relaxed font-medium">
                  Merging legacy with future-proof engineering.
                </p>
             </div>
           </motion.div>
 
           <motion.div 
-            className="order-1 lg:order-2 space-y-6 md:space-y-12"
+            className="order-1 lg:order-2 space-y-10"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div>
-              <h2 className="text-3xl sm:text-5xl md:text-7xl font-serif text-foreground uppercase tracking-tighter mb-4 md:mb-6 leading-tight">
-                Who <br className="hidden sm:block" /> We Are<span className="text-primary italic">.</span>
+            <div className="space-y-6">
+              <span className="text-[10px] tracking-[0.5em] uppercase text-primary font-bold">Our Narrative</span>
+              <h2 className="text-4xl md:text-6xl font-serif text-foreground uppercase tracking-tighter leading-tight">
+                Who We Are<span className="text-primary italic">.</span>
               </h2>
-              <div className="w-16 md:w-24 h-[1px] bg-primary/30 mb-6 md:mb-8" />
-              <p className="text-lg sm:text-xl md:text-2xl font-light text-foreground/80 leading-relaxed italic">
-                ViMond Realty is an architectural powerhouse dedicated to redefining the Pune skyline.
+              <div className="w-16 h-[2px] bg-primary/30" />
+              <p className="text-xl md:text-2xl font-light text-foreground/80 leading-relaxed italic">
+                ViMond Realty is an architectural powerhouse dedicated to redefining the Pune skyline with intelligent design.
               </p>
             </div>
             
-            <p className="text-sm font-light text-foreground/60 leading-relaxed max-w-md">
-              We believe luxury is the thoughtful response to modern living. Our studio approach treats every blueprint as a masterwork of precision and artistry.
+            <p className="text-base font-light text-foreground/60 leading-relaxed max-w-lg">
+              We believe luxury is the thoughtful response to modern living. Our studio approach treats every blueprint as a masterwork of precision, ensuring durability and timelessness.
             </p>
 
-            <div className="grid grid-cols-1 gap-6 md:gap-8 pt-4 md:pt-8">
+            <div className="grid grid-cols-1 gap-8 pt-6">
               {[
                 { id: "01", title: "Intelligent Design", desc: "Form follows thought in every detail." },
                 { id: "02", title: "Prime Locations", desc: "Curating heritage and lifestyle value." },
                 { id: "03", title: "Timeless Art", desc: "Architecture that remains elegant for decades." }
               ].map((item) => (
-                <div key={item.id} className="flex gap-4 md:gap-6 items-start border-l border-primary/20 pl-4 md:pl-6 group">
+                <div key={item.id} className="flex gap-6 items-start group">
                   <span className="text-[10px] tracking-[0.4em] uppercase text-primary font-bold group-hover:translate-x-1 transition-transform">{item.id}</span>
                   <div>
-                    <h3 className="text-sm md:text-lg font-serif uppercase tracking-widest">{item.title}</h3>
-                    <p className="text-[10px] font-light text-foreground/40 uppercase tracking-widest mt-1">{item.desc}</p>
+                    <h3 className="text-base md:text-lg font-serif uppercase tracking-widest">{item.title}</h3>
+                    <p className="text-[10px] font-medium text-foreground/40 uppercase tracking-[0.2em] mt-2">{item.desc}</p>
                   </div>
                 </div>
               ))}
